@@ -1,0 +1,56 @@
+/* Home.module.css */
+.homeContainerWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .homeContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns all child elements (h1, p, icons) to the right */
+    text-align: right; /* Ensures text itself is right-aligned */
+    max-width: 500px;
+  }
+  
+  .content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content p {
+    margin-bottom: 1rem;
+  }
+  
+  .iconLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Align icons to the right */
+  }
+  
+  .icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    border-radius: 2%;
+  }
+  

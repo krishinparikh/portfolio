@@ -1,0 +1,22 @@
+/* Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers the links in the middle */
+    align-items: center;
+    gap: 5rem; /* Controls the space between the links */
+    padding: 1.2rem 2rem;
+    background-color: #222b3e; /* Optional: background color */
+  }
+  
+  .navLink {
+    color: #fff; /* Keeps links the same color */
+    text-decoration: none; /* Removes underline */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s; /* Smooth color transition */
+  }
+  
+  .navLink:hover {
+    color: #8c90a4; /* Optional: Hover color to provide feedback */
+  }
+  
