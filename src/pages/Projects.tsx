@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       description: "An AI agent that solves any scrambled 8-puzzle using three different local search algorithms and compares their respective performances.",
       image: EightPuzzle,
       link: "/projects/project-three",
-      tools: "Python • Flask • React"
+      tools: "Python • Flask • React • CSS"
     },
     {
       title: "Nexa",
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
       description: "This website!",
       image: PersonalWebsite,
       link: "/projects/project-five",
-      tools: "React • CSS"
+      tools: "React • TypeScript • CSS • Vercel"
     }
   ];
 
