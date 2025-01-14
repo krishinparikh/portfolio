@@ -19,8 +19,18 @@
     text-align: left;
   }
 
+  .content a {
+    color: rgb(31, 112, 193);
+    text-decoration: none;
+  }
+
+  .content a:hover {
+    color: rgb(14, 71, 129);
+    transition: color 0.2s;
+  }
+
   .subheader {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   .image {

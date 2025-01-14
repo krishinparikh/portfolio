@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, link, tools }) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
+    <a href={link} rel="noopener noreferrer" className={styles.cardLink}>
       <div className={styles.card}>
         <img src={image} alt={title} className={styles.image} />
         <h3 className={styles.title}>{title}</h3>
