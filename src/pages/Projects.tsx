@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
     },
     {
         title: "PeerEd",
-        description: "A program facilitating peer-to-peer learning between high school and middle school students.",
+        description: "A nonprofit program facilitating peer-to-peer learning between high school and middle school students.",
         image: PeerEd,
         link: "/projects/peer-ed",
         tools: "Startup Ideation"

@@ -23,13 +23,13 @@ const AfferenceSDK: React.FC = () => {
       <img src={Phantom} alt="" style={{width: "70%"}} />
       <p className={styles.content}>The original Unity application was a significant advancement, but it was limited to the specific hardware configuration and stimulation parameters of the Phantom device. It did not accommodate the variety of prototypes and plans for both past and future Afference wearables, such as the Afference Ring shown below.
       </p>
-      <br />
-      <img src={AfferenceRing} alt="Afference Ring" style={{width: "15%"}} />
+      <img src={AfferenceRing} alt="Afference Ring" style={{width: "15%", margin: "20px 0px"}} />
       <p className={styles.content}>To address these limitations, the natural next step was to build an object-oriented system capable of abstracting the wide range of possible hardware configurations and stimulation mechanisms. This level of abstraction is essential, as the system must handle scenarios where certain sensations cannot be produced consistently across multiple products due to varying hardware constraints.
         <br /><br />
         To achieve this, the CTO and I collaborated on creating a new native C# library. I took the lead in establishing and organizing the GitHub repository, and we utilized UML diagrams to reach a shared understanding of the system design. A project of this scale required careful consideration of the entire user experience of the SDK, including designing an intuitive API entry point and determining which features should be exposed or hidden from users.</p>
       <h2 className={styles.subheader}>Reflections</h2>
-      <p className={styles.content}>The Afference SDK was the largest system I have ever designed. I learned so much not only about robust object-oriented programming, but also the importance of best practices that often get overlooked: repository organization, clear commenting, rigorous documentation and diagramming, and establishing coding conventions. Ignoring these best practices significantly raises the risk of accumulating technical debt, a serious issue that several big companies suffer from.</p>
+      <p className={styles.content}>The Afference SDK was the largest system I have ever designed. I learned so much not only about robust object-oriented programming, but also the importance of best practices that often get overlooked: repository organization, clear commenting, rigorous documentation and diagramming, and establishing coding conventions. Ignoring these best practices significantly raises the risk of accumulating technical debt, a serious issue that several big companies suffer from.
+      </p>
     </div>
   );
 };

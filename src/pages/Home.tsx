@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       {/* New paragraph section */}
       <div className={styles.aboutSection}>
         <p>
-            I am a junior double majoring in Computer Science and Finance at Case Western Reserve University, driven by a passion for building and designing technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
+            I am a junior double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, driven by a passion for building and designing technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
             <br /><br />
             The signs of my future career path were clear from a young age: I loved taking apart and rebuilding household electronics, coding video games in Scratch, 3D printing personalized trinkets for friends and family, and building a buzzer system for my middle school Quiz Bowl team.
             <br /><br />
@@ -40,15 +40,15 @@ const Home: React.FC = () => {
             <br /><br />
             High school exposed me to a different type of building—team building. Leading student organizations like Mock Trial, Student Council, and the Yearbook Committee, I learned that 1) great people are the cornerstone of success, 2) meaningful progress requires healthy disagreement, and 3) people are receptive to clear visions told through stories.
             <br /><br />
-            In my freshman year, I applied an EdTech startup idea of mine to the Northeast Ohio Student Venture Fund. While the startup didn't work out, I inadvertently got dragged into the fund as an analyst/investor, teaching me about the world of venture capital and how to build a much better business in the future.
+            In my freshman year, I applied an EdTech startup idea of mine to Venture @ CWRU, a student-venture fund. While the startup didn't work out, I inadvertently got dragged into the fund as an analyst/investor, teaching me about the world of venture capital and how to build a much better business in the future. Under my leadership, Venture @ CWRU grew from just 4 to 25+ recurring members, becoming one of the most active business organizations on campus.
             <br /><br />
-            I've since further immersed myself in the startup ecosystem, having been selected as a Case Western Alumni Venture Fund Fellow and a Veale Snyder Fellow, which allowed me to take fully funded trips to Silicon Valley, Las Vegas (for the Consumer Electronics Show), and Ireland to visit tech companies and network with professionals.
+            I've continued my passion for startups as a selected Alumni Venture Fellow, where I've gotten the opportunity to source deals and make investments of up to $25,000 per company. In 2023, I was a selected Veale Snyder Fellow, allowing me to take fully funded trips to Silicon Valley, Las Vegas (for the Consumer Electronics Show), and Ireland to visit tech companies and network with professionals.
             <br /><br />
-            That Fellowship opened many doors, including my current internship at Afference, a startup whose mission is to bring the sense of touch—a key aspect of human connection—to the digital world. I help build and design an SDK for their flagship product, the Phantom: a mobile glove that creates tactile sensations in the fingers through electrical stimulation.
+            That Fellowship opened many doors, including my previous internship at Afference, a startup whose mission is to bring the sense of touch—a key aspect of human connection—to the digital world. I helped build and design a software development kit that will be deployed alongside Afference products, allowing software developers to integrate complex haptics into their digital experiences.
             <br /><br />
             So, what's next?
             <br /><br />
-            Next semester, I'm studying abroad in Madrid, Spain! Aside from that, I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please feel free to email me at krishinparikh@gmail.com.
+            This spring semester, I'm studying abroad in Madrid, Spain! Aside from that, I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please feel free to email me at krishinparikh@gmail.com.
         </p>
       </div>
     </div>
