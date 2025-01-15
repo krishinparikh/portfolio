@@ -7,6 +7,8 @@ import Blog from "./pages/Blog";
 import EightPuzzle from "./pages/projects/EightPuzzle";
 import AfferenceSDK from "./pages/projects/AfferenceSDK";
 import Nexa from "./pages/projects/Nexa";
+import PeerEd from "./pages/projects/PeerEd";
+import CubeFlow from "./pages/projects/CubeFlow";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -20,6 +22,8 @@ const App: React.FC = () => {
       "/projects/eight-puzzle": "8-Puzzle Solver | Krishin Parikh",
       "/projects/afference-sdk": "Afference SDK | Krishin Parikh",
       "/projects/nexa": "Nexa | Krishin Parikh",
+      "/projects/peer-ed": "PeerEd | Krishin Parikh",
+      "/projects/cube-flow": "CubeFlow | Krishin Parikh",
     };
 
     // Update the document title based on the current path
@@ -36,6 +40,8 @@ const App: React.FC = () => {
         <Route path="/projects/eight-puzzle" element={<EightPuzzle />} />
         <Route path="/projects/afference-sdk" element={<AfferenceSDK />} />
         <Route path="/projects/nexa" element={<Nexa />} />
+        <Route path="/projects/peer-ed" element={<PeerEd />} />
+        <Route path="/projects/cube-flow" element={<CubeFlow />} />
       </Routes>
     </>
   );

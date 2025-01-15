@@ -9,7 +9,7 @@ const EightPuzzle: React.FC = () => {
       <p className={styles.content}><i>An AI agent web application that solves the famous 8-puzzle using three local search algorithms.</i></p>
       <p className={styles.content}><b>Website: </b><a href="http://eightpuzzlesolver.vercel.app" target="_blank">eightpuzzlesolver.vercel.app</a></p>
       <p className={styles.content}><b>GitHub: </b><a href="http://github.com/krishinparikh/eight-puzzle" target="_blank">github.com/krishinparikh/eight-puzzle</a></p>
-      <img className={styles.image} src={EightPuzzleScreenshot} />
+      <img className={styles.image} src={EightPuzzleScreenshot} style={{width: "100%", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"}} />
       <h2 className={styles.subheader}>Background</h2>
       <p className={styles.content}>In my Intro to Artificial Intelligence class, I built a Python terminal application that could solve any 8-Puzzle. After the class, I wrote a friendlier user interface in React, which connects to the Python backend via Flask.</p>
       <h2 className={styles.subheader}>Development</h2>

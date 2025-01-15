@@ -6,6 +6,7 @@ import EightPuzzleImg from "../assets/8Puzzle.png";
 import AfferenceLogo from "../assets/AfferenceLogo.jpg";
 import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
+import PeerEd from "../assets/PeerEd.png";
 
 const Projects: React.FC = () => {
   const projectData = [
@@ -20,7 +21,7 @@ const Projects: React.FC = () => {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
       image: RubiksCube,
-      link: "/projects/project-two",
+      link: "/projects/cube-flow",
       tools: "HTML • CSS • JavaScript • Firebase • Node.js"
     },
     {
@@ -41,9 +42,16 @@ const Projects: React.FC = () => {
       title: "Personal Website",
       description: "This website!",
       image: PersonalWebsite,
-      link: "/projects/project-five",
+      link: "/",
       tools: "React.js • TypeScript • CSS • Vercel"
-    }
+    },
+    {
+        title: "PeerEd",
+        description: "A program facilitating peer-to-peer learning between high school and middle school students.",
+        image: PeerEd,
+        link: "/projects/peer-ed",
+        tools: "Startup Ideation"
+    },
   ];
 
   return (
