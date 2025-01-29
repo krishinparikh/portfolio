@@ -7,7 +7,7 @@ const Nexa: React.FC = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Nexa</h1>
-      <p className={styles.content}><i>An AI assistant to help college students maintain their professional relationships.</i></p>
+      <p className={styles.content}><i>A mobile app AI assistant to help college students maintain their professional relationships.</i></p>
       <img src={NexaFigma} alt="Nexa Wireframe" style={{width: "100%", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"}} />
       <h2 className={styles.subheader}>Background</h2>
       <p className={styles.content}>Although I consider myself an avid networker, I often struggle to maintain connections with the professionals I meet. Some apps, like <a href="http://getdex.com" target="_blank">Dex</a> and <a href="http://clay.earth">Clay</a>, have attempted to address this issue by positioning themselves as "personal CRMs." However, these platforms seemed more tailored to working professionals. I saw an opportunity to innovate specifically for the niche of college students.</p>

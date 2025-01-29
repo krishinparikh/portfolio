@@ -31,7 +31,7 @@
   
   .content h2 {
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: rgb(95, 95, 95);
   }
@@ -45,11 +45,14 @@
   .icon {
     width: 30px;
     height: 30px;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
+
+    opacity: 20%;
   }
   
   .icon:hover {
     transform: scale(1.1);
+    opacity: 50%;
   }
   
   .image {
@@ -69,3 +72,13 @@
     font-size: 1.1rem;
   }
   
+
+  .aboutSection a {
+    color: rgb(31, 112, 193);
+    text-decoration: none;
+  }
+
+  .aboutSection a:hover {
+    color: rgb(14, 71, 129);
+    transition: color 0.2s;
+  }

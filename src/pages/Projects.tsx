@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
   const projectData = [
     {
       title: "Afference SDK",
-      description: "A 4,000+ line C# SDK that allows developers to use Afference products to integrate haptics into their digital experiences.",
+      description: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
       image: AfferenceLogo,
       link: "/projects/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
     },
     {
       title: "8-Puzzle Solver",
-      description: "An AI agent that solves any scrambled 8-puzzle using three different local search algorithms and compares their respective performances.",
+      description: "An AI agent web application that solves the famous 8-puzzle using three local search algorithms.",
       image: EightPuzzleImg,
       link: "/projects/eight-puzzle",
       tools: "Python • Flask • React.js • TypeScript • CSS • Render • Vercel"
     },
     {
       title: "Nexa",
-      description: "An app to help college students maintain professional relationships by using online information to craft personalized AI-generated conversation starters.",
+      description: "A mobile app AI assistant to help college students maintain their professional relationships.",
       image: NexaImg,
       link: "/projects/nexa",
       tools: "Figma • Customer Discovery"
