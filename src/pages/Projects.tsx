@@ -14,28 +14,28 @@ const Projects: React.FC = () => {
       title: "Afference SDK",
       description: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
       image: AfferenceLogo,
-      link: "/portfolio/afference-sdk",
+      link: "/projects/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
     {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
       image: RubiksCube,
-      link: "/portfolio/cube-flow",
+      link: "/projects/cube-flow",
       tools: "HTML • CSS • JavaScript • Firebase • Node.js"
     },
     {
       title: "8-Puzzle Solver",
       description: "An AI agent web application that solves the famous 8-puzzle using three local search algorithms.",
       image: EightPuzzleImg,
-      link: "/portfolio/eight-puzzle",
+      link: "/projects/eight-puzzle",
       tools: "Python • Flask • React.js • TypeScript • CSS • Render • Vercel"
     },
     {
       title: "Nexa",
       description: "A mobile app AI assistant to help college students maintain their professional relationships.",
       image: NexaImg,
-      link: "/portfolio/nexa",
+      link: "/projects/nexa",
       tools: "Figma • Customer Discovery"
     },
     {
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
         title: "PeerEd",
         description: "A nonprofit program facilitating peer-to-peer learning between high school and middle school students.",
         image: PeerEd,
-        link: "/portfolio/peer-ed",
+        link: "/projects/peer-ed",
         tools: "Startup Ideation"
     },
   ];
