@@ -17,13 +17,13 @@ const App: React.FC = () => {
     // Define dynamic titles for each route
     const pageTitles: Record<string, string> = {
       "/": "Krishin Parikh",
-      "/projects": "Projects | Krishin Parikh",
+      "/portfolio": "Portfolio | Krishin Parikh",
       "/blog": "Blog | Krishin Parikh",
-      "/projects/eight-puzzle": "8-Puzzle Solver | Krishin Parikh",
-      "/projects/afference-sdk": "Afference SDK | Krishin Parikh",
-      "/projects/nexa": "Nexa | Krishin Parikh",
-      "/projects/peer-ed": "PeerEd | Krishin Parikh",
-      "/projects/cube-flow": "CubeFlow | Krishin Parikh",
+      "/portfolio/eight-puzzle": "8-Puzzle Solver | Krishin Parikh",
+      "/portfolio/afference-sdk": "Afference SDK | Krishin Parikh",
+      "/portfolio/nexa": "Nexa | Krishin Parikh",
+      "/portfolio/peer-ed": "PeerEd | Krishin Parikh",
+      "/portfolio/cube-flow": "CubeFlow | Krishin Parikh",
     };
 
     // Update the document title based on the current path
@@ -35,13 +35,13 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/portfolio" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/projects/eight-puzzle" element={<EightPuzzle />} />
-        <Route path="/projects/afference-sdk" element={<AfferenceSDK />} />
-        <Route path="/projects/nexa" element={<Nexa />} />
-        <Route path="/projects/peer-ed" element={<PeerEd />} />
-        <Route path="/projects/cube-flow" element={<CubeFlow />} />
+        <Route path="/portfolio/eight-puzzle" element={<EightPuzzle />} />
+        <Route path="/portfolio/afference-sdk" element={<AfferenceSDK />} />
+        <Route path="/portfolio/nexa" element={<Nexa />} />
+        <Route path="/portfolio/peer-ed" element={<PeerEd />} />
+        <Route path="/portfolio/cube-flow" element={<CubeFlow />} />
       </Routes>
     </>
   );

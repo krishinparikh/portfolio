@@ -14,28 +14,28 @@ const Projects: React.FC = () => {
       title: "Afference SDK",
       description: "A 4,000+ line C# SDK that allows developers to use Afference products to integrate haptics into their digital experiences.",
       image: AfferenceLogo,
-      link: "/projects/afference-sdk",
+      link: "/portfolio/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
     {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
       image: RubiksCube,
-      link: "/projects/cube-flow",
+      link: "/portfolio/cube-flow",
       tools: "HTML • CSS • JavaScript • Firebase • Node.js"
     },
     {
       title: "8-Puzzle Solver",
       description: "An AI agent that solves any scrambled 8-puzzle using three different local search algorithms and compares their respective performances.",
       image: EightPuzzleImg,
-      link: "/projects/eight-puzzle",
+      link: "/portfolio/eight-puzzle",
       tools: "Python • Flask • React.js • TypeScript • CSS • Render • Vercel"
     },
     {
       title: "Nexa",
       description: "An app to help college students maintain professional relationships by using online information to craft personalized AI-generated conversation starters.",
       image: NexaImg,
-      link: "/projects/nexa",
+      link: "/portfolio/nexa",
       tools: "Figma • Customer Discovery"
     },
     {
@@ -49,14 +49,14 @@ const Projects: React.FC = () => {
         title: "PeerEd",
         description: "A nonprofit program facilitating peer-to-peer learning between high school and middle school students.",
         image: PeerEd,
-        link: "/projects/peer-ed",
+        link: "/portfolio/peer-ed",
         tools: "Startup Ideation"
     },
   ];
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Portfolio</h1>
       <div className={styles["projects-grid"]}>
         {projectData.map((project, index) => (
           <ProjectCard
