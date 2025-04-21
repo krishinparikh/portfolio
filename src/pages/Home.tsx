@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <div className={styles.homeContainer}>
         <div className={styles.content}>
           <h1>Krishin Parikh</h1>
-          <h2>Student, Leader, Technologist</h2>
+          <h2>Student, Leader, Innovator</h2>
           <div className={styles.iconLinks}>
             <a href="https://www.linkedin.com/in/krishin-parikh/" target="_blank" rel="noopener noreferrer">
               <img src={LinkedinIcon} alt="LinkedIn Icon" className={styles.icon} />
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       {/* New paragraph section */}
       <div className={styles.aboutSection}>
         <p>
-            I am a junior double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build and design technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
+            I am a third-year student double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build and design technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
             <br /><br />
             The signs of my future career path were clear from a young age: I loved taking apart and rebuilding household electronics, coding video games in Scratch, 3D printing personalized trinkets for friends and family, and building a buzzer system for my middle school Quiz Bowl team. 
             <br /><br />
@@ -48,9 +48,11 @@ const Home: React.FC = () => {
             <br /><br />
             That Fellowship opened many doors, including my previous internship at <a href="http://afference.io" target="_blank">Afference</a>, a startup whose mission is to bring the sense of touch—a key aspect of human connection—to the digital world. I helped build and design a software development kit that will be deployed alongside Afference products, allowing software developers to integrate complex haptics into their digital experiences.
             <br /><br />
+            My philosophy is defined by a commitment to lifelong learning. I love learning about emerging trends in technology, business, finance, economics, and politics, mainly through podcasts (20VC, Acquired, All-In, Lex Fridman, Lenny's Newsletter, Y Combinator). I love learning about new people and cultures, which inspired me to study abroad this semester at Universidad Carlos III de Madrid in Spain.
+            <br /><br />
             Amid the many incredible opportunites I've been fortunate to receive, I make a conscious effort to never forget my "why." Teaching STEM at the <a href="https://time2rise.org/" target="_blank">Time to Rise</a> summer program and volunteering at <a href="https://idealist.org/en/nonprofit/e0c31efdb62448d686bd135188131234-lunch-buddies-at-bolton-elementary-cleveland" target="_blank">Bolton Elementary School</a> have kept me grounded and attuned to the deeply rooted social and educational issues I aspire to address in the future.
             <br /><br />
-            This spring, I'm excited to further expand my horizons during my semester study abroad at Universidad Carlos III de Madrid in Spain! Otherwise, I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please email me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>.
+            I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please email me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>.
         </p>
       </div>
     </div>

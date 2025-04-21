@@ -1,29 +1,29 @@
-/* Projects.module.css */
 
-h1 {
-    text-align: center; /* Centers the h1 title */
-    font-size: 4rem; /* Adjust size as desired */
-    margin-bottom: 1rem; /* Adds space between the h1 and the project grid */
-  }
-  
-  .projects-grid {
+.projects-grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr); /* Forces a two-column layout */
-    max-width: 1000px; /* Limits the width of the grid to center it */
-    margin: 0 auto; /* Centers the grid container within the page */
-    padding: 1rem; /* Optional padding for spacing */
-  }
-  
-  .project-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.project-card {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.2s;
-  }
-  
-  .project-card:hover {
+}
+
+.project-card:hover {
     transform: scale(1.05);
-  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+    }
+}
