@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       {/* New paragraph section */}
       <div className={styles.aboutSection}>
         <p>
-            I am a third-year student double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build and design technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
+            I'm a third-year student double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build and design technologies that strengthen human connections—a bold vision shaped by over two decades of dynamic experiences.
             <br /><br />
             The signs of my future career path were clear from a young age: I loved taking apart and rebuilding household electronics, coding video games in Scratch, 3D printing personalized trinkets for friends and family, and building a buzzer system for my middle school Quiz Bowl team. 
             <br /><br />
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
             <br /><br />
             Amid the many incredible opportunites I've been fortunate to receive, I make a conscious effort to never forget my "why." Teaching STEM at the <a href="https://time2rise.org/" target="_blank">Time to Rise</a> summer program and volunteering at <a href="https://idealist.org/en/nonprofit/e0c31efdb62448d686bd135188131234-lunch-buddies-at-bolton-elementary-cleveland" target="_blank">Bolton Elementary School</a> have kept me grounded and attuned to the deeply rooted social and educational issues I aspire to address in the future.
             <br /><br />
-            I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please email me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>.
+            If you've made it this far, thank you; you can also see my portfolio and blog on this website. I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please email me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>.
         </p>
       </div>
     </div>

@@ -26,4 +26,8 @@
     .projects-grid {
         grid-template-columns: 1fr; /* Switch to a single-column layout */
     }
+
+    .title {
+        font-size: 3rem;
+    }
 }

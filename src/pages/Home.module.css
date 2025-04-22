@@ -82,8 +82,8 @@
 @media (max-width: 768px) {
     .homeContainer {
         flex-direction: column; /* Stack items vertically */
-        gap: 1.5rem; /* Reduce gap between items */
-        padding: 1rem; /* Add padding for smaller screens */
+        gap: 1.5rem;
+        /* padding: 1rem; */
     }
 
     .content {
@@ -95,6 +95,7 @@
     .content h1 {
         text-align: center;
         font-size: 3rem;
+        /* width: 90%; */
     }
 
     .content h2 {

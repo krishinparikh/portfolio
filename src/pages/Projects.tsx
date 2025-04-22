@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
 
   return (
     <div>
-      <h1 className="title">Portfolio</h1>
+      <h1 className={styles.title}>Portfolio</h1>
       <div className={styles["projects-grid"]}>
         {projectData.map((project, index) => (
           <ProjectCard
