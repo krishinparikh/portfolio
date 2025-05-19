@@ -27,6 +27,29 @@
     text-align: right;
 }
 
+.rotatingText {
+    /* font-style: italic; */
+    color: rgb(145, 145, 145);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    min-height: 1.5em;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
 .content h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -53,7 +76,7 @@
 }
 
 .image {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 4%;
 }
@@ -102,9 +125,7 @@
         font-size: 1.5rem;
     }
 
-    .aboutSection {
-        font-size: 1rem; /* Reduce font size for readability */
-        line-height: 1.4; /* Adjust line height */
-        margin-top: 1.5rem;
+    .rotatingText {
+        font-size: 1.5rem;
     }
 }

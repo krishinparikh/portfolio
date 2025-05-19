@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Story from "./pages/Story";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import EightPuzzle from "./pages/projects/EightPuzzle";
@@ -17,8 +18,8 @@ const App: React.FC = () => {
     // Define dynamic titles for each route
     const pageTitles: Record<string, string> = {
       "/": "Krishin Parikh",
+      "/story": "Story | Krishin Parikh",
       "/projects": "Portfolio | Krishin Parikh",
-      "/blog": "Blog | Krishin Parikh",
       "/projects/eight-puzzle": "8-Puzzle Solver | Krishin Parikh",
       "/projects/afference-sdk": "Afference SDK | Krishin Parikh",
       "/projects/nexa": "Nexa | Krishin Parikh",
@@ -35,6 +36,7 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/story" element={<Story />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/projects/eight-puzzle" element={<EightPuzzle />} />

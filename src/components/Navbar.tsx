@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <Link to="/" className={styles.navLink}>HOME</Link>
       <Link to="/projects" className={styles.navLink}>PORTFOLIO</Link>
-      <Link to="https://www.linkedin.com/in/krishin-parikh/recent-activity/all/" target="_blank" className={styles.navLink}>BLOG</Link>
+      <Link to="/story" className={styles.navLink}>STORY</Link>
     </nav>
   );
 };
