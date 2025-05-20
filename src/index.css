@@ -38,7 +38,7 @@ p, ul {
     font-size: 1.3rem;
     color: #555;
     line-height: 1.6;
-    /* font-weight: 300; */
+    word-spacing: 0.08em;
 }
 
 @media (max-width: 768px) {

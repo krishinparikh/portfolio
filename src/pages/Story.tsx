@@ -7,7 +7,7 @@ const Story: React.FC = () => {
       <h1 className={styles.title}>Driven by Purpose</h1>
       <div className={styles.aboutContainer}>
         <p>
-            I'm a fourth-year student double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build digital experiences that drive human connection — a bold vision shaped by over two decades of dynamic experiences.
+            I'm an incoming fourth-year student double majoring in Computer Science and Finance and minoring in Economics at Case Western Reserve University, motivated to build digital experiences that inspire human connection — a bold vision shaped by over two decades of dynamic growth.
         </p>
 
         <p>
@@ -27,7 +27,7 @@ const Story: React.FC = () => {
         </p>
 
         <p>
-            I've further pursued venture capital as a selected <a href="https://case.edu/entrepreneurship/alumni-venture-fund" target="_blank">Alumni Venture Fellow</a>, where I've gotten the opportunity to source deals and make investments of up to $25,000 per company. I was also 1 of 5 members on Case Western's <a href="http://vcic.org" target="_blank" rel="noopener noreferrer">Venture Capital Investment Competition</a> (VCIC) team, where we placed 3rd in our region for our outstanding due diligence and deal memo construction. 
+            I've further pursued venture capital as a selected <a href="https://case.edu/entrepreneurship/alumni-venture-fund" target="_blank">Alumni Venture Fellow</a>, where I've gotten the opportunity to source deals and make investments of up to $25,000 per company. I was also 1 of 5 members on Case Western's <a href="http://vcic.org" target="_blank" rel="noopener noreferrer">Venture Capital Investment Competition</a> (VCIC) team, where we placed 3rd in our region for our outstanding due diligence and deal memo construction.
         </p>
 
         <p>
@@ -47,7 +47,12 @@ const Story: React.FC = () => {
         </p>
 
         <p>
-            Thank you for making it this far; you can also see my portfolio and blog on this website. I'm always seeking new opportunities to build, contribute, and learn with innovative teams. If you'd like to connect, please email me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>.
+            I'm always seeking new opportunities to build, contribute, and learn with innovative teams. Please connect with me at <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a> or <a href="http://linkedin.com/in/krishin-parikh" target="_blank" rel="noopener noreferrer">LinkedIn</a> if you'd like to start a conversation!
+        </p>
+        <p>
+            With optimism and gratitude,
+            <br />
+            Krishin Parikh
         </p>
       </div>
     </div>

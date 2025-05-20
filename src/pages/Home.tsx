@@ -11,14 +11,12 @@ const Home: React.FC = () => {
   const phrases = [
     "seek discomfort",
     "process over outcomes",
-    "be kind and direct",
     "invest in relationships",
     "work hard, play hard",
     "follow curiosity",
     "seek different viewpoints",
     "walk the talk",
-    "focus on the long-term",
-    "do the right thing"
+    "focus on the long-term"
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -89,7 +87,7 @@ const Home: React.FC = () => {
         </ul>
 
         <p>
-          💵 I invest in startups through my university (<a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a>, <a href="https://www.linkedin.com/company/neosvf-cwru/" target="_blank" rel="noopener noreferrer">NEOSVF</a>, <a href="http://vcic.org/" target="_blank" rel="noopener noreferrer">VCIC</a>), gaining an appreciation for the difficulty of business building.
+          💵 I invest in startups through my university (<a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a>, <a href="https://www.linkedin.com/company/neosvf-cwru/" target="_blank" rel="noopener noreferrer">NEOSVF</a>, <a href="http://vcic.org/" target="_blank" rel="noopener noreferrer">VCIC</a>), where I've gained deep insights into the hustle and creativity required for entrepreneurial success.
         </p>
 
         <p>
