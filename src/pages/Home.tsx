@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         </p>
 
         <p>
-          🧠 I like <a href="/projects">building stuff</a>, <a href="https://substack.com/@krishinparikh" target="_blank" rel="noopener noreferrer">writing my thoughts</a>, and <a href="https://krishin.notion.site/library" target="_blank" rel="noopener noreferrer">consuming knowledge</a>, and <a href="http://krishin.notion.site/tools" target="_blank" rel="noopener noreferrer">exploring tools that give me leverage</a>.
+          🧠 I like <a href="/projects">building stuff</a>, <a href="https://substack.com/@krishinparikh" target="_blank" rel="noopener noreferrer">writing my thoughts</a>, <a href="https://krishin.notion.site/library" target="_blank" rel="noopener noreferrer">consuming knowledge</a>, and <a href="http://krishin.notion.site/tools" target="_blank" rel="noopener noreferrer">exploring high-leverage tools</a>.
         </p>
 
         <p>
