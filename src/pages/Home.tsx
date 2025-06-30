@@ -81,7 +81,7 @@ const Home: React.FC = () => {
         </p>
 
         <ul>
-          <li>Product Engineering at <a href="http://theohiofund.com" target="_blank" rel="noopener noreferrer">The O.H.I.O. Fund</a> (Incoming Summer 2025)</li>
+          <li>Product Engineering at <a href="http://theohiofund.com" target="_blank" rel="noopener noreferrer">The O.H.I.O. Fund</a> (Present)</li>
           <li>Software Engineering at <a href="http://afference.io" target="_blank" rel="noopener noreferrer">Afference</a> (Summer/Fall 2024)</li>
           <li>Business Development at <a href="http://immersivetouch.com" target="_blank" rel="noopener noreferrer">ImmersiveTouch</a> (Summer 2023)</li>
         </ul>
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         </p>
 
         <p>
-          🧠 I like <a href="/projects">building stuff</a>, <a href="https://substack.com/@krishinparikh" target="_blank" rel="noopener noreferrer">writing my thoughts</a>, and <a href="https://krishin.notion.site/library" target="_blank" rel="noopener noreferrer">consuming knowledge</a>.
+          🧠 I like <a href="/projects">building stuff</a>, <a href="https://substack.com/@krishinparikh" target="_blank" rel="noopener noreferrer">writing my thoughts</a>, and <a href="https://krishin.notion.site/library" target="_blank" rel="noopener noreferrer">consuming knowledge</a>, and <a href="http://krishin.notion.site/tools" target="_blank" rel="noopener noreferrer">exploring tools that give me leverage</a>.
         </p>
 
         <p>
