@@ -8,7 +8,7 @@ import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
 import PeerEd from "../assets/PeerEd.png";
 import TOFLogo from "../assets/TOFLogo.png";
-import FortuityLogo from "../assets/FortuityLogo.png";
+// import FortuityLogo from "../assets/FortuityLogo.png";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
 
