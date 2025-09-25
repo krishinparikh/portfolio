@@ -7,9 +7,20 @@ import AfferenceLogo from "../assets/AfferenceLogo.jpg";
 import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
 import PeerEd from "../assets/PeerEd.png";
+import TOFLogo from "../assets/TOFLogo.png";
+import FortuityLogo from "../assets/FortuityLogo.png";
+import PageTitle from "../components/PageTitle";
+import Footer from "../components/Footer";
 
 const Projects: React.FC = () => {
   const projectData = [
+    {
+        title: "The O.H.I.O. Fund CRM",
+        description: "An advanced CRM for an investment firm to streamline management of deal flow, fundraising, and portfolio tracking.",
+        image: TOFLogo,
+        link: "/projects/tof-crm",
+        tools: "React • TypeScript • FastAPI • LangChain"
+    },
     {
       title: "Afference SDK",
       description: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
@@ -18,12 +29,20 @@ const Projects: React.FC = () => {
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
     {
+        title: "Fortuity",
+        description: "A consumer SaaS platform that accelerates personalized networking for job seekers.",
+        image: FortuityLogo,
+        link: "/projects/fortuity",
+        tools: "Startup Ideation"
+    },
+    {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
       image: RubiksCube,
       link: "/projects/cube-flow",
       tools: "HTML • CSS • JavaScript • Firebase • Node.js"
     },
+    
     {
       title: "8-Puzzle Solver",
       description: "An AI agent web application that solves the famous 8-puzzle using three local search algorithms.",
@@ -56,7 +75,7 @@ const Projects: React.FC = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>Portfolio</h1>
+      <PageTitle title="Portfolio" subtitle="A collection of my internship work, startup ideas, and side projects. Click inside for a detailed case study of each project, from ideation to launch."></PageTitle>
       <div className={styles["projects-grid"]}>
         {projectData.map((project, index) => (
           <ProjectCard
@@ -69,6 +88,7 @@ const Projects: React.FC = () => {
           />
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -1,11 +1,10 @@
-/* Home.module.css */
-
 .homeContainerWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    padding: 0rem 1rem;
 }
 
 .homeContainer {
@@ -13,6 +12,7 @@
     align-items: center;
     gap: 3rem;
     max-width: 1000px;
+    margin-top: 1rem;
 }
 
 .content {
@@ -28,14 +28,10 @@
 }
 
 .rotatingText {
-    /* font-style: italic; */
     color: rgb(145, 145, 145);
     margin-bottom: 1rem;
-    font-size: 2rem;
     min-height: 1.5em;
-    font-weight: 700;
-    font-size: 2rem;
-    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
 }
 
 .visible {
@@ -83,8 +79,8 @@
 
 .aboutSection {
     max-width: 800px;
-    width: 100%; /* Ensures it takes up full width */
-    text-align: left; /* Aligns text to the left */
+    width: 100%;
+    text-align: left;
     margin-top: 2rem;
     line-height: 1.6;
     color: #333;
@@ -101,24 +97,21 @@
     transition: color 0.2s;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .homeContainer {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         gap: 1.5rem;
-        /* padding: 1rem; */
     }
 
     .content {
         align-items: center;
         text-align: center;
-        max-width: 100%; /* Allow content to take full width */
+        max-width: 100%;
     }
 
     .content h1 {
         text-align: center;
         font-size: 3rem;
-        /* width: 90%; */
     }
 
     .content h2 {

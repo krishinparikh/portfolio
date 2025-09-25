@@ -10,11 +10,10 @@
     border-radius: 8px;
     background-color: #fff;
     transition: transform 0.2s;
-    min-height: 310px;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .image {
@@ -36,10 +35,4 @@
 .description {
     font-size: 1rem;
     margin-top: 0.25rem;
-}
-
-.tools {
-    font-size: 0.9rem;
-    color: #aaa; /* Light gray color for distinction */
-    margin-top: 0.5rem;
 }

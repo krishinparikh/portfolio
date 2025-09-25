@@ -1,0 +1,53 @@
+.footer {
+    width: 100%;
+    background: rgba(255, 255, 255);
+    border-top: 1px solid rgb(224, 224, 224);
+    margin-top: 4rem;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.name {
+    margin: 0;
+    text-align: left;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.container a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    opacity: 20%;
+}
+
+.container a:hover {
+    opacity: 50%;
+    transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
+    /* transition: color 0.2s; */
+}

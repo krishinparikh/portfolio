@@ -1,7 +1,7 @@
 .aboutContainer {
     max-width: 800px;
-    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .title {
@@ -63,7 +63,6 @@
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .title {
         font-size: 3rem;

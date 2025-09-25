@@ -10,18 +10,15 @@
     align-items: center;
     gap: 5rem; /* Controls the space between the links */
     padding: 1.2rem 2rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Adds the glass-like blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
-    border-radius: 12px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow */
+    background: rgba(255, 255, 255);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     z-index: 1000; /* Ensures the navbar stays above other elements */
 
 }
 
 .navLink {
-    font-family: 'Space Grotesk', sans-serif;
     color: #9d9d9d;
     text-decoration: none;
     font-size: 1rem;
@@ -29,6 +26,11 @@
 }
 
 .navLink:hover {
-    color: #555; /* Optional: Hover color to provide feedback */
-    font-weight: 700;
+    color: #000000;
+    /* font-weight: 700; */
+}
+
+.active {
+    color: #000;
+    /* font-weight: 700; */
 }
