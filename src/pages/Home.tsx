@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                 {/* New paragraph section */}
                 <div className={styles.aboutSection}>
                     <p>
-                        I am a technology leader who thrives at creating structure from ambiguity—with the mindset of an engineer and entrepreneur.
+                        I am a technology leader who thrives at creating structure from ambiguity — with the mindset of an engineer and entrepreneur.
                     </p>
 
                     <p>
@@ -214,7 +214,6 @@ const Home: React.FC = () => {
             </div>
         <Footer />
         </div>
-    );
 };
 
 export default Home;
