@@ -1,25 +1,23 @@
 import React from "react";
-import styles from "./ProjectCard.module.css";
+import styles from "./ServiceCard.module.css";
 
-interface ProjectCardProps {
+interface ServiceCardProps {
   title: string;
   description: string;
   image: string;
   link: string;
-  tools?: string; // New property for tools/technologies
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, link, tools }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, image, link }) => {
   return (
     <a href={link} rel="noopener noreferrer" className={styles.cardLink}>
       <div className={styles.card}>
         <img src={image} alt={title} className={styles.image} />
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
-        <p className={styles.tools}>{tools}</p>
       </div>
     </a>
   );
 };
 
-export default ProjectCard;
+export default ServiceCard;
