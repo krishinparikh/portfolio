@@ -25,13 +25,13 @@ const Services: React.FC = () => {
             image: CRM,
             link: "/services/crm-implementation",
         },
-        {
-            title: "Professional Development",
-            description:
-                "Learn the soft skills, resources, and creative techniques required to land your dream job or internship.",
-            image: JobSearch,
-            link: "/services/professional-development",
-        },
+        // {
+        //     title: "Professional Development",
+        //     description:
+        //         "Learn the soft skills, resources, and creative techniques required to land your dream job or internship.",
+        //     image: JobSearch,
+        //     link: "/services/professional-development",
+        // },
         {
             title: "Rubik's Cube Lessons",
             description:

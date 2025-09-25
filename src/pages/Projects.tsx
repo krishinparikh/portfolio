@@ -28,13 +28,13 @@ const Projects: React.FC = () => {
       link: "/projects/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
-    {
-        title: "Fortuity",
-        description: "A consumer SaaS platform that accelerates personalized networking for job seekers.",
-        image: FortuityLogo,
-        link: "/projects/fortuity",
-        tools: "Startup Ideation"
-    },
+    // {
+    //     title: "Fortuity",
+    //     description: "A consumer SaaS platform that accelerates personalized networking for job seekers.",
+    //     image: FortuityLogo,
+    //     link: "/projects/fortuity",
+    //     tools: "Startup Ideation"
+    // },
     {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",

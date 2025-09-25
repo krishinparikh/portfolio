@@ -12,10 +12,10 @@ import Nexa from "./pages/projects/Nexa";
 import PeerEd from "./pages/projects/PeerEd";
 import CubeFlow from "./pages/projects/CubeFlow";
 import TOFCRM from "./pages/projects/TOFCRM";
-import Fortuity from "./pages/projects/Fortuity";
+// import Fortuity from "./pages/projects/Fortuity";
 import GenerativeAIConsulting from "./pages/services/GenerativeAIConsulting";
 import CRMImplementation from "./pages/services/CRMImplementation";
-import ProfessionalDevelopment from "./pages/services/ProfessionalDevelopment";
+// import ProfessionalDevelopment from "./pages/services/ProfessionalDevelopment";
 import RubiksCubeLessons from "./pages/services/RubiksCubeLessons";
 
 const App: React.FC = () => {
@@ -33,13 +33,13 @@ const App: React.FC = () => {
       "/story": "Story | Krishin Parikh",
       "/projects/tof-crm": "The O.H.I.O. Fund CRM | Krishin Parikh",
       "/projects/afference-sdk": "Afference SDK | Krishin Parikh",
-      "/projects/fortuity": "Fortuity | Krishin Parikh",
+    //   "/projects/fortuity": "Fortuity | Krishin Parikh",
       "/projects/eight-puzzle": "8-Puzzle Solver | Krishin Parikh",
       "/projects/nexa": "Nexa | Krishin Parikh",
       "/projects/peer-ed": "PeerEd | Krishin Parikh",
       "/projects/cube-flow": "CubeFlow | Krishin Parikh",
       "/services/generative-ai-consulting": "Generative AI Consulting | Krishin Parikh",
-      "/services/crm-implementation": "CRM Implementation | Krishin Parikh",
+    //   "/services/crm-implementation": "CRM Implementation | Krishin Parikh",
       "/services/professional-development": "Professional Development | Krishin Parikh",
       "/services/rubiks-cube-lessons": "Rubik's Cube Lessons | Krishin Parikh",
     };
@@ -59,14 +59,14 @@ const App: React.FC = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/projects/tof-crm" element={<TOFCRM />} />
         <Route path="/projects/eight-puzzle" element={<EightPuzzle />} />
-        <Route path="/projects/fortuity" element={<Fortuity />} />
+        {/* <Route path="/projects/fortuity" element={<Fortuity />} /> */}
         <Route path="/projects/afference-sdk" element={<AfferenceSDK />} />
         <Route path="/projects/nexa" element={<Nexa />} />
         <Route path="/projects/peer-ed" element={<PeerEd />} />
         <Route path="/projects/cube-flow" element={<CubeFlow />} />
         <Route path="/services/generative-ai-consulting" element={<GenerativeAIConsulting />} />
         <Route path="/services/crm-implementation" element={<CRMImplementation />} />
-        <Route path="/services/professional-development" element={<ProfessionalDevelopment />} />
+        {/* <Route path="/services/professional-development" element={<ProfessionalDevelopment />} /> */}
         <Route path="/services/rubiks-cube-lessons" element={<RubiksCubeLessons />} />
       </Routes>
     </>
