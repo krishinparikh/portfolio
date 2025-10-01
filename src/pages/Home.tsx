@@ -215,6 +215,6 @@ const Home: React.FC = () => {
         <Footer />
         </div>
     );
-};  
+};
 
 export default Home;
