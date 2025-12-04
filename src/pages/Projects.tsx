@@ -8,7 +8,8 @@ import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
 import PeerEd from "../assets/PeerEd.png";
 import TOFLogo from "../assets/TOFLogo.png";
-// import FortuityLogo from "../assets/FortuityLogo.png";
+import FortuityLogo from "../assets/FortuityLogo.png";
+import CurioLogo from "../assets/CurioLogo.png";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
 
@@ -20,6 +21,13 @@ const Projects: React.FC = () => {
         image: TOFLogo,
         link: "/projects/tof-crm",
         tools: "React • TypeScript • FastAPI • LangChain"
+    },
+    {
+      title: "Curio",
+      description: "Create courses on anything tailored to your unique background and interests — powered by AI.",
+      image: CurioLogo,
+      link: "/projects/curio",
+      tools: "React • TypeScript • Next.js • OpenAI"
     },
     {
       title: "Afference SDK",
@@ -42,7 +50,6 @@ const Projects: React.FC = () => {
       link: "/projects/cube-flow",
       tools: "HTML • CSS • JavaScript • Firebase • Node.js"
     },
-    
     {
       title: "8-Puzzle Solver",
       description: "An AI agent web application that solves the famous 8-puzzle using three local search algorithms.",
