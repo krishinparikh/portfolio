@@ -25,7 +25,7 @@ const RubiksCubeLessons: React.FC = () => {
     return (
         <MinorPageLayout 
             title="Rubik's Cube Lessons" 
-            subtitle="I will implement a cost-effective, durable CRM solution that augments your specific organizational processes."
+            subtitle="Take beginner to intermediate Rubik's Cube lessons from a 13-second-average competitive speedcuber."
         >
             {content}
         </MinorPageLayout>

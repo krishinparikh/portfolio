@@ -159,7 +159,7 @@ const Home: React.FC = () => {
                     </ul>
 
                     <p>
-                        💵 I am President of Case Western's <a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a>—a venture fund investing in Case alumni/faculty ($425k invested across 15 companies)—exposing me to countless startups and teaching me important entrepreneurial lessons.
+                        💵 I'm the President of Case Western's <a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a> — a venture fund investing in Case alumni/faculty ($425k invested across 15 companies) — exposing me to countless startups and teaching me important entrepreneurial lessons.
                     </p>
 
                     <p>
