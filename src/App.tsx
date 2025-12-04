@@ -13,6 +13,7 @@ import PeerEd from "./pages/projects/PeerEd";
 import CubeFlow from "./pages/projects/CubeFlow";
 import TOFCRM from "./pages/projects/TOFCRM";
 // import Fortuity from "./pages/projects/Fortuity";
+import Curio from "./pages/projects/Curio";
 import GenerativeAIConsulting from "./pages/services/GenerativeAIConsulting";
 import CRMImplementation from "./pages/services/CRMImplementation";
 // import ProfessionalDevelopment from "./pages/services/ProfessionalDevelopment";
@@ -38,6 +39,7 @@ const App: React.FC = () => {
       "/projects/nexa": "Nexa | Krishin Parikh",
       "/projects/peer-ed": "PeerEd | Krishin Parikh",
       "/projects/cube-flow": "CubeFlow | Krishin Parikh",
+      "/projects/curio": "Curio | Krishin Parikh",
       "/services/generative-ai-consulting": "Generative AI Consulting | Krishin Parikh",
     //   "/services/crm-implementation": "CRM Implementation | Krishin Parikh",
       "/services/professional-development": "Professional Development | Krishin Parikh",
@@ -64,6 +66,7 @@ const App: React.FC = () => {
         <Route path="/projects/nexa" element={<Nexa />} />
         <Route path="/projects/peer-ed" element={<PeerEd />} />
         <Route path="/projects/cube-flow" element={<CubeFlow />} />
+        <Route path="/projects/curio" element={<Curio />} />
         <Route path="/services/generative-ai-consulting" element={<GenerativeAIConsulting />} />
         <Route path="/services/crm-implementation" element={<CRMImplementation />} />
         {/* <Route path="/services/professional-development" element={<ProfessionalDevelopment />} /> */}
