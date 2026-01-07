@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
       description: "Create courses on anything tailored to your unique background and interests — powered by AI.",
       image: CurioLogo,
       link: "/projects/curio",
-      tools: "React • TypeScript • Next.js • OpenAI"
+      tools: "Next.js • TypeScript • React • OpenAI"
     },
     {
       title: "Afference SDK",
@@ -36,13 +36,13 @@ const Projects: React.FC = () => {
       link: "/projects/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
-    // {
-    //     title: "Fortuity",
-    //     description: "A consumer SaaS platform that accelerates personalized networking for job seekers.",
-    //     image: FortuityLogo,
-    //     link: "/projects/fortuity",
-    //     tools: "Startup Ideation"
-    // },
+    {
+      title: "Consultant Digital Mind",
+      description: "AI chatbot for productivity consultant client that delivers on-demand advice in her authentic voice and expertise.",
+      image: AfferenceLogo,
+      link: "/projects/consultant-digital-mind",
+      tools: "Next.js • TypeScript • React • LangChain • Pinecone • Notion API"
+    },
     {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
