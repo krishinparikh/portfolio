@@ -8,7 +8,7 @@ import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
 import PeerEd from "../assets/PeerEd.png";
 import TOFLogo from "../assets/TOFLogo.png";
-import FortuityLogo from "../assets/FortuityLogo.png";
+import LIO_Logo from "../assets/LIO_Logo.png";
 import CurioLogo from "../assets/CurioLogo.png";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
       description: "Create courses on anything tailored to your unique background and interests — powered by AI.",
       image: CurioLogo,
       link: "/projects/curio",
-      tools: "React • TypeScript • Next.js • OpenAI"
+      tools: "Next.js • TypeScript • React • OpenAI"
     },
     {
       title: "Afference SDK",
@@ -36,13 +36,13 @@ const Projects: React.FC = () => {
       link: "/projects/afference-sdk",
       tools: "C# • Unity • UML • Python • NumPy • Matplotlib"
     },
-    // {
-    //     title: "Fortuity",
-    //     description: "A consumer SaaS platform that accelerates personalized networking for job seekers.",
-    //     image: FortuityLogo,
-    //     link: "/projects/fortuity",
-    //     tools: "Startup Ideation"
-    // },
+    {
+      title: "Consultant Digital Mind",
+      description: "AI chatbot for productivity consultant client that delivers on-demand advice in her authentic voice and expertise.",
+      image: LIO_Logo,
+      link: "/projects/consultant-digital-mind",
+      tools: "Next.js • TypeScript • React • LangChain • Pinecone • Notion API"
+    },
     {
       title: "CubeFlow",
       description: "A beautiful Rubik's Cube timer with Google login and cloud support—a feature offered by only one other online timer.",
