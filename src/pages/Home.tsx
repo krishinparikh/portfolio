@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                 {/* New paragraph section */}
                 <div className={styles.aboutSection}>
                     <p>
-                        I am a technology leader who thrives at creating structure from ambiguity — with the mindset of an engineer and entrepreneur.
+                        I'm an entrepreneurial technology leader obsessed with building impactful software experiences.
                     </p>
 
                     <p>
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
                             >
                                 The O.H.I.O. Fund
                             </a>{" "}
-                            (Present)
+                            (Summer 2025)
                         </li>
                         <li>
                             Software Engineering at{" "}
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
                     </ul>
 
                     <p>
-                        💵 I'm the President of Case Western's <a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a> — a venture fund investing in Case alumni/faculty ($425k invested across 15 companies) — exposing me to countless startups and teaching me important entrepreneurial lessons.
+                        💵 I'm the President of Case Western's <a href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund" target="_blank" rel="noopener noreferrer">Alumni Venture Fund</a> — a venture fund investing in Case alumni/faculty ($450k invested across 16 companies) — exposing me to countless startups and teaching me important entrepreneurial lessons.
                     </p>
 
                     <p>

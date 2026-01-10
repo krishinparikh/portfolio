@@ -8,7 +8,7 @@ import NexaImg from "../assets/Nexa.jpg";
 import PersonalWebsite from "../assets/PersonalWebsite.jpg";
 import PeerEd from "../assets/PeerEd.png";
 import TOFLogo from "../assets/TOFLogo.png";
-import FortuityLogo from "../assets/FortuityLogo.png";
+import LIO_Logo from "../assets/LIO_Logo.png";
 import CurioLogo from "../assets/CurioLogo.png";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
     {
       title: "Consultant Digital Mind",
       description: "AI chatbot for productivity consultant client that delivers on-demand advice in her authentic voice and expertise.",
-      image: AfferenceLogo,
+      image: LIO_Logo,
       link: "/projects/consultant-digital-mind",
       tools: "Next.js • TypeScript • React • LangChain • Pinecone • Notion API"
     },
