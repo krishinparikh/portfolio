@@ -10,6 +10,24 @@ import LowFidelityImage from "../../assets/Curio/LowFidelity.png";
 const Curio: React.FC = () => {
     const content = (
         <div className={styles.container}>
+          <p className={styles.content}>
+                <b>Website: </b>
+                <a
+                    href="http://getcurio.us/"
+                    target="_blank"
+                >
+                    getcurio.us
+                </a>
+            </p>
+            <p className={styles.content}>
+                <b>GitHub: </b>
+                <a
+                    href="https://github.com/krishinparikh/curio"
+                    target="_blank"
+                >
+                    github.com/krishinparikh/curio
+                </a>
+            </p>
             <h2 className={styles.subheader}>Background</h2>
             <p className={styles.content}>
               What is the best method to self-learn a topic? On one hand, a regular course (perhaps through school or online) provides clear structure, but constrains learners into a one-size-fits-all curriculum. On the other hand, ChatGPT and other AI tools adapt to each user, but lack the structure of a traditional course.
