@@ -1,56 +1,46 @@
-import React from "react";
-import styles from "./Footer.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { SOCIAL_LINKS, CONTACT } from "@/data/constants";
 
-import LinkedinIcon from "../assets/LinkedinIcon.png";
-import GithubIcon from "../assets/GithubIcon.png";
-import YoutubeIcon from "../assets/YoutubeIcon.png";
-
-const Footer: React.FC = () => {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <h1 className={styles.name}><a href="/">Krishin Parikh</a></h1>
-                <div className={styles.social}>
-                    <a href="mailto:krishinparikh@gmail.com">krishinparikh@gmail.com</a>
-                    <a
-                        href="https://www.linkedin.com/in/krishin-parikh/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src={LinkedinIcon}
-                            alt="LinkedIn Icon"
-                            className={styles.icon}
-                        />
-                    </a>
-                    <a
-                        href="https://github.com/krishinparikh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src={GithubIcon}
-                            alt="GitHub Icon"
-                            className={styles.icon}
-                        />
-                    </a>
-                    <a
-                        href="https://www.youtube.com/@k2bfree"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src={YoutubeIcon}
-                            alt="YouTube Icon"
-                            className={styles.icon}
-                        />
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
-};
-
-export default Footer;
-
-
+export function Footer() {
+  return (
+    <footer className="w-full bg-white border-t border-border mt-16 py-12 px-4">
+      <div className="flex items-center justify-between gap-4 max-w-[1000px] mx-auto w-full max-md:flex-col max-md:items-start max-md:gap-6">
+        <h1 className="!text-left !text-[2rem] m-0">
+          <Link href="/" className="text-black no-underline opacity-20 hover:opacity-50 transition-opacity duration-200">
+            Krishin Parikh
+          </Link>
+        </h1>
+        <div className="flex items-center gap-5 max-md:gap-4">
+          <a
+            href={`mailto:${CONTACT.email}`}
+            className="text-black no-underline opacity-20 hover:opacity-50 transition-opacity duration-200"
+          >
+            {CONTACT.email}
+          </a>
+          {[
+            { href: SOCIAL_LINKS.linkedin, icon: "/images/LinkedinIcon.png", alt: "LinkedIn" },
+            { href: SOCIAL_LINKS.github, icon: "/images/GithubIcon.png", alt: "GitHub" },
+            { href: SOCIAL_LINKS.youtube, icon: "/images/YoutubeIcon.png", alt: "YouTube" },
+          ].map(({ href, icon, alt }) => (
+            <a
+              key={alt}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-20 hover:opacity-50 transition-all duration-200"
+            >
+              <Image
+                src={icon}
+                alt={`${alt} Icon`}
+                width={30}
+                height={30}
+                className="hover:scale-110 transition-transform duration-200"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
+}
