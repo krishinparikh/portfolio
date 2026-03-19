@@ -5,7 +5,7 @@ import type { Service } from "@/types";
 export function ServiceCard({ title, description, image, link }: Service) {
   return (
     <Link href={link} className="no-underline text-inherit inline-block">
-      <div className="p-3 border border-border rounded-lg bg-white transition-transform duration-200 hover:scale-[1.015]">
+      <div className="p-4 border border-border rounded-xl bg-white transition-all duration-200 hover:scale-[1.015] hover:border-gray-400">
         <div className="flex items-center justify-center h-[100px] shrink-0 mb-3">
           <Image
             src={image}

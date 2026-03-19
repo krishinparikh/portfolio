@@ -47,7 +47,7 @@ export default function Home() {
         <FadeIn delay={200}>
         <div className="max-w-[720px] w-full text-left mt-8 leading-relaxed [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
           <p>
-            I&apos;m an entrepreneurial technology leader obsessed with building impactful software experiences.
+            I&apos;m an entrepreneurial technology leader obsessed with building great products and teams.
           </p>
           <p>
             I study Computer Science, Finance, and Economics at{" "}
@@ -91,9 +91,8 @@ export default function Home() {
             >
               Alumni Venture Fund
             </a>{" "}
-            &mdash; a venture fund investing in Case alumni/faculty ($450k invested across 16
-            companies) &mdash; exposing me to countless startups and teaching me important
-            entrepreneurial lessons.
+            &mdash; a venture fund investing in Case alumni/faculty (~$500k invested across 17
+            companies) &mdash; where I've gotten a bird’s-eye view on many industries and the opportunity to meet incredible founders.
           </p>
           <p>
             I like <Link href="/projects">building stuff</Link>,{" "}
