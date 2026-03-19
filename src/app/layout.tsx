@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
 import { Funnel_Sans, Inter_Tight, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
@@ -37,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelSans.variable} ${interTight.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${GeistSans.variable} ${funnelSans.variable} ${interTight.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <Navbar />
         <ScrollToTop />

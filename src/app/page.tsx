@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center w-full px-4">
-        <div className="flex items-center gap-12 max-w-[1000px] mt-4 max-md:flex-col max-md:gap-6">
+        <div className="flex items-center gap-8 max-w-[900px] mt-4 max-md:flex-col max-md:gap-6">
           <div className="text-right flex flex-col items-end max-w-[500px] max-md:items-center max-md:text-center max-md:max-w-full">
             <h1 className="!text-right max-md:!text-center max-md:!text-[3rem]">Krishin Parikh</h1>
             <PhraseCarousel />
@@ -41,7 +41,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="max-w-[800px] w-full text-left mt-8 leading-relaxed text-[#333] text-[1.2rem] [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
+        <div className="max-w-[720px] w-full text-left mt-8 leading-relaxed [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
           <p>
             I&apos;m an entrepreneurial technology leader obsessed with building impactful software experiences.
           </p>

@@ -15,7 +15,7 @@ export default function Projects() {
         title="Portfolio"
         subtitle="A collection of my internship work, startup ideas, and side projects. Click inside for a detailed case study of each project, from ideation to launch."
       />
-      <div className="grid gap-6 grid-cols-2 max-w-[1000px] mx-auto p-4 max-md:grid-cols-1">
+      <div className="grid gap-4 grid-cols-2 max-w-[900px] mx-auto p-4 max-md:grid-cols-1">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

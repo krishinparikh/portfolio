@@ -3,7 +3,7 @@ import { FullImage } from "@/components/content-container";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    h2: (props) => <h2 className="mt-12 max-md:text-[2rem]" {...props} />,
+    h2: (props) => <h2 className="mt-8 mb-3" {...props} />,
     a: (props) => {
       const isExternal = props.href && !props.href.startsWith("/");
       return isExternal ? (

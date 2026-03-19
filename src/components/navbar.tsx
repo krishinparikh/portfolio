@@ -15,7 +15,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex items-center justify-center px-8 py-5 bg-white border-b border-border z-[1000] md:justify-center">
+    <nav className="fixed top-0 left-0 right-0 flex items-center justify-center px-8 py-3 bg-white border-b border-border z-[1000] md:justify-center">
       <button
         className="hidden md:hidden max-md:flex flex-col justify-between w-6 h-6 bg-transparent border-none cursor-pointer p-0"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -39,7 +39,7 @@ export function Navbar() {
       </button>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center justify-center gap-20">
+      <div className="hidden md:flex items-center justify-center gap-12">
         {NAV_ITEMS.map(({ label, href, exact }) => (
           <Link
             key={href}

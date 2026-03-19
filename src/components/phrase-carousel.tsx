@@ -23,7 +23,7 @@ export function PhraseCarousel() {
 
   return (
     <div
-      className={`text-[#919191] mb-4 min-h-[1.5em] text-[1.8rem] max-md:text-[1.5rem] transition-all duration-500 ease-in-out ${
+      className={`text-text-muted mb-4 min-h-[1.5em] text-[1.5rem] max-md:text-[1.25rem] transition-all duration-500 ease-in-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2.5"
       }`}
     >

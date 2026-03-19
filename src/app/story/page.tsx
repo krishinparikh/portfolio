@@ -11,7 +11,7 @@ export default function Story() {
   return (
     <div>
       <PageTitle title="Driven by Curiosity" />
-      <div className="max-w-[800px] mx-auto px-4 [&_p]:mb-6 [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
+      <div className="max-w-[720px] mx-auto px-4 [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
         <p>
           I was twelve when my middle school Quiz Bowl coach floated the idea of purchasing a buzzer system for our practices. You know those game shows where contestants race to hit a button first? That&apos;s basically what we needed. My teammates started searching online for viable options, but my instinct was a little different. Instead, I thought to myself: <i>what if I could build it?</i>
         </p>

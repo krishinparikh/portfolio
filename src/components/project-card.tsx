@@ -5,7 +5,7 @@ import type { Project } from "@/types";
 export function ProjectCard({ title, description, image, link, tools }: Project) {
   return (
     <Link href={link} className="no-underline text-inherit inline-block">
-      <div className="p-4 border border-border rounded-lg bg-white transition-transform duration-200 hover:scale-[1.02] min-h-[310px]">
+      <div className="p-3 border border-border rounded-lg bg-white transition-transform duration-200 hover:scale-[1.015] min-h-[310px]">
         <Image
           src={image}
           alt={title}
@@ -15,7 +15,7 @@ export function ProjectCard({ title, description, image, link, tools }: Project)
         />
         <h3 className="mt-2">{title}</h3>
         <p className="!text-base mt-1">{description}</p>
-        <p className="!text-sm !text-[#aaa] mt-2">{tools}</p>
+        <p className="!text-sm !text-text-muted mt-2">{tools}</p>
       </div>
     </Link>
   );

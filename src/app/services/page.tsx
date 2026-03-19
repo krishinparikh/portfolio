@@ -15,7 +15,7 @@ export default function Services() {
         title="Services"
         subtitle="Click inside to explore the various freelance services I offer. Each engagement will be tailored to your specific needs. Reach out to learn about next steps if you're interested!"
       />
-      <div className="grid gap-6 grid-cols-2 max-w-[1000px] mx-auto p-4 max-md:grid-cols-1">
+      <div className="grid gap-4 grid-cols-2 max-w-[900px] mx-auto p-4 max-md:grid-cols-1">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
