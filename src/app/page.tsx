@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { PhraseCarousel } from "@/components/phrase-carousel";
 import { SOCIAL_LINKS, CONTACT } from "@/data/constants";
+import { FadeIn } from "@/components/fade-in";
 
 const socialIcons = [
   { href: SOCIAL_LINKS.linkedin, icon: "/images/LinkedinIcon.png", alt: "LinkedIn" },
@@ -14,33 +15,36 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center w-full px-4">
-        <div className="flex items-center gap-8 max-w-[900px] mt-4 max-md:flex-col max-md:gap-6">
-          <div className="text-right flex flex-col items-end max-w-[500px] max-md:items-center max-md:text-center max-md:max-w-full">
-            <h1 className="!text-right max-md:!text-center max-md:!text-[3rem]">Krishin Parikh</h1>
-            <PhraseCarousel />
-            <div className="flex gap-4 justify-end">
-              {socialIcons.map(({ href, icon, alt }) => (
-                <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={icon}
-                    alt={`${alt} Icon`}
-                    width={30}
-                    height={30}
-                    className="opacity-20 hover:opacity-50 hover:scale-110 transition-all duration-200"
-                  />
-                </a>
-              ))}
+        <FadeIn>
+          <div className="flex items-center gap-8 max-w-[900px] mt-4 max-md:flex-col max-md:gap-6">
+            <div className="text-right flex flex-col items-end max-w-[500px] max-md:items-center max-md:text-center max-md:max-w-full">
+              <h1 className="!text-right max-md:!text-center max-md:!text-[3rem]">Krishin Parikh</h1>
+              <PhraseCarousel />
+              <div className="flex gap-4 justify-end">
+                {socialIcons.map(({ href, icon, alt }) => (
+                  <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={icon}
+                      alt={`${alt} Icon`}
+                      width={30}
+                      height={30}
+                      className="opacity-20 hover:opacity-50 hover:scale-110 transition-all duration-200"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
+            <Image
+              src="/images/Headshot.jpg"
+              alt="Krishin Parikh"
+              width={250}
+              height={250}
+              className="w-[250px] h-auto rounded-[4%]"
+            />
           </div>
-          <Image
-            src="/images/Headshot.jpg"
-            alt="Krishin Parikh"
-            width={250}
-            height={250}
-            className="w-[250px] h-auto rounded-[4%]"
-          />
-        </div>
+        </FadeIn>
 
+        <FadeIn delay={200}>
         <div className="max-w-[720px] w-full text-left mt-8 leading-relaxed [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
           <p>
             I&apos;m an entrepreneurial technology leader obsessed with building impactful software experiences.
@@ -118,6 +122,7 @@ export default function Home() {
             Read my <Link href="/story">full story</Link> to learn my &ldquo;why&rdquo; behind the &ldquo;what&rdquo;.
           </p>
         </div>
+        </FadeIn>
       </div>
       <Footer />
     </div>

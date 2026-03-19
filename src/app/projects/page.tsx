@@ -3,6 +3,7 @@ import { PageTitle } from "@/components/page-title";
 import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/data/projects";
+import { FadeIn } from "@/components/fade-in";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,7 +18,9 @@ export default function Projects() {
       />
       <div className="grid gap-4 grid-cols-2 max-w-[900px] mx-auto p-4 max-md:grid-cols-1">
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <FadeIn key={index} delay={index * 100}>
+            <ProjectCard {...project} />
+          </FadeIn>
         ))}
       </div>
       <Footer />
