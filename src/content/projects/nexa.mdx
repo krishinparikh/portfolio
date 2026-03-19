@@ -1,0 +1,34 @@
+export const frontmatter = {
+  title: "Nexa",
+  subtitle: "A mobile app AI assistant to help college students maintain their professional relationships.",
+  description: "A mobile app AI assistant to help college students maintain their professional relationships.",
+  image: "/images/Nexa.jpg",
+  slug: "nexa",
+  type: "project",
+  tools: "Figma • Customer Discovery",
+  order: 7,
+};
+
+<FullImage src="/images/NexaFigma.png" alt="Nexa Wireframe" />
+
+## Background
+
+Although I consider myself an avid networker, I often struggle to maintain connections with the professionals I meet. Some apps, like [Dex](http://getdex.com) and [Clay](http://clay.earth), have attempted to address this issue by positioning themselves as "personal CRMs." However, these platforms seemed more tailored to working professionals. I saw an opportunity to innovate specifically for the niche of college students.
+
+## Discovery
+
+To validate this problem with a larger sample size, I reached out to over 20 college students, asking each a series of open-ended questions, such as "What are your motivations behing reaching out to someone?" or "What is the hardest thing about networking for you?" I grouped their answers into an Excel sheet and Notion workspace to identify common themes. I discovered that most people faced the same issue, often attempting to address it with spreadsheets but struggling to maintain them. The most significant insight was that many wanted to follow up but were unsure what to include in their follow-up messages.
+
+## Ideation
+
+To address that problem, I envisoned a Contacts-style mobile app that could scrape the online presence of the user's contacts—such as LinkedIn and Twitter activity, for example—and offer personalized AI-generated recommendations based on that. The app could send reminder notifications to follow up with specific contacts. I started wireframing the app in Figma shown above. I outlined a detailed plan, shown below, to determine when to release which features.
+
+<FullImage src="/images/NexaRoadmap.png" alt="Nexa Product Roadmap" />
+
+My technology stack of choice would have been React Native for mobile frontend; Supabase for the SQL database and authentication; Node.js and Express.js for connecting the stack together; the Gmail API for sending and reading emails; and OpenAI API for AI generation. Unfortunately, my plans to contine designing and start developing this app were cut short.
+
+## Reflections
+
+Nexa in its current form factor is what Y Combinator partner Dalton Caldwell might call a "tarpit idea"—an idea that gains promising initial traction but reveals significant challenges upon closer examination. In hindsight, the simplest way to validate the AI aspect of this app would have been to take a set of random LinkedIn notifications and manually process them through an LLM to evaluate whether it could generate meaningful recommendations. There might be potential for this idea in another form factor, like a Chrome extension.
+
+Despite these setbacks, I gained a deep appreciation for the challenge of identifying high value problems that can be solved through business and technology.

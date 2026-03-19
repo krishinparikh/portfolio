@@ -1,0 +1,37 @@
+export const frontmatter = {
+  title: "Afference SDK",
+  subtitle: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
+  description: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
+  image: "/images/AfferenceLogo.jpg",
+  slug: "afference-sdk",
+  type: "project",
+  tools: "C# • Unity • UML • Python • NumPy • Matplotlib",
+  website: "http://afference.io",
+  order: 3,
+};
+
+## Background
+
+Co-founded by a serial entrepreneur and a neurotechnology expert, [Afference](http://afference.io) is an early-stage startup aiming to bring the sense of touch—a core sensory experience—to virtual reality and smart wearables. Drawing from their expertise in neural engineering, Afference builds rings and gloves that create unique haptics in the fingertips by electrically stimulating the peripheral nervous system. Watch [Freethink's Hard Reset video](https://youtu.be/KGDWtPeMpDs?si=iZTiMGDsmiQvp4Cy) to learn more about Afference.
+
+I was hired to help develop a scalable library to facilitate internal experimentation of different neural stimulation paradigms to discover different possible sensations. Later, this code will serve as the foundation of the software development kit (SDK), which will be deployed alongside Afference products.
+
+## Development
+
+I was tasked with developing the layer of the software stack responsible for translating digital interactions—such as pressing a button in virtual reality—into stimulation parameters understood by the device firmware to accurately simulate that specific interaction. The science underneath this software was informed by haptic research developed by the CTO. To better understand this research, I began by creating a Python model using libraries such as NumPy, SciPy, and Matplotlib, allowing me to visualize how adjusting different variables impacted the resulting stimulation paradigms.
+
+After gaining clarity through the Python model, I shifted my focus to Unity and C#, the platforms where the team had previously built several virtual reality and computer demos leveraging Afference haptics. In Unity, I designed and developed an internal tool that enabled users to transform any intensity curve into customized stimulation parameters for the Phantom, the Afference product shown below.
+
+<img src="/images/Phantom.png" alt="Phantom device" className="w-[70%] mb-4" />
+
+The original Unity application was a significant advancement, but it was limited to the specific hardware configuration and stimulation parameters of the Phantom device. It did not accommodate the variety of prototypes and plans for both past and future Afference wearables, such as the Afference Ring shown below.
+
+<img src="/images/AfferenceRing.jpg" alt="Afference Ring" className="w-[15%] my-5" />
+
+To address these limitations, the natural next step was to build an object-oriented system capable of abstracting the wide range of possible hardware configurations and stimulation mechanisms. This level of abstraction is essential, as the system must handle scenarios where certain sensations cannot be produced consistently across multiple products due to varying hardware constraints.
+
+To achieve this, the CTO and I collaborated on creating a new native C# library. I took the lead in establishing and organizing the GitHub repository, and we utilized UML diagrams to reach a shared understanding of the system design. A project of this scale required careful consideration of the entire user experience of the SDK, including designing an intuitive API entry point and determining which features should be exposed or hidden from users.
+
+## Reflections
+
+I learned so much not only about robust object-oriented programming, but also the importance of best practices that often get overlooked: repository organization, clear commenting, rigorous documentation and diagramming, and establishing coding conventions. Ignoring these best practices significantly raises the risk of accumulating technical debt, a serious issue that several big companies suffer from.
