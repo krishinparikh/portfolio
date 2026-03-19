@@ -11,7 +11,7 @@ export function MinorPageLayout({ title, subtitle, children }: MinorPageLayoutPr
   return (
     <div>
       <MinorPageTitle title={title} subtitle={subtitle} />
-      <main className="px-4">{children}</main>
+      <main className="px-4 max-md:px-6">{children}</main>
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ import { SOCIAL_LINKS, CONTACT } from "@/data/constants";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-white border-t border-border mt-12 py-8 px-4">
+    <footer className="w-full bg-white border-t border-border mt-12 py-8 px-4 max-md:px-6">
       <div className="flex items-center justify-between gap-4 max-w-[900px] mx-auto w-full max-md:flex-col max-md:items-start max-md:gap-6">
         <h1 className="!text-left !text-[1.75rem] m-0">
           <Link href="/" className="text-black no-underline opacity-20 hover:opacity-50 transition-opacity duration-200">

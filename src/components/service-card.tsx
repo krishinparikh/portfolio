@@ -6,14 +6,16 @@ export function ServiceCard({ title, description, image, link }: Service) {
   return (
     <Link href={link} className="no-underline text-inherit inline-block">
       <div className="p-3 border border-border rounded-lg bg-white transition-transform duration-200 hover:scale-[1.015]">
-        <Image
-          src={image}
-          alt={title}
-          width={400}
-          height={100}
-          className="max-w-[400px] max-h-[100px] w-auto h-auto rounded object-contain block mx-auto py-4"
-        />
-        <h3 className="mt-2">{title}</h3>
+        <div className="flex items-center justify-center h-[100px] shrink-0 mb-3">
+          <Image
+            src={image}
+            alt={title}
+            width={400}
+            height={100}
+            className="max-w-[90%] max-h-[80px] w-auto h-auto object-contain"
+          />
+        </div>
+        <h3 className="mt-1">{title}</h3>
         <p className="!text-base mt-1">{description}</p>
       </div>
     </Link>

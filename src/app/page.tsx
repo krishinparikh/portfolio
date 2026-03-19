@@ -14,7 +14,7 @@ const socialIcons = [
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-col items-center w-full px-4">
+      <div className="flex flex-col items-center w-full px-4 max-md:px-6">
         <FadeIn>
           <div className="flex items-center gap-8 max-w-[900px] mt-4 max-md:flex-col max-md:gap-6">
             <div className="text-right flex flex-col items-end max-w-[500px] max-md:items-center max-md:text-center max-md:max-w-full">

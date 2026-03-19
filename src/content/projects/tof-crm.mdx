@@ -45,11 +45,9 @@ Then, I moved onto the high-fidelity mockup. I created my own design system, tak
 
 The first software development challenge was determining the best tech stack to use. Given our desire to optimize for a large developer ecosystem and speed, we landed on the following:
 
-Frontend: React, TypeScript, Tailwind, shadcn/ui
-<br />
-Backend: FastAPI, Pydantic, SQLAlchemy, SQLModel, Alembic, PostgreSQL
-<br />
-Cloud: AWS RDS (database), AWS App Runner (server), AWS ECS, Docker
+- Frontend: React, TypeScript, Tailwind, shadcn/ui
+- Backend: FastAPI, Pydantic, SQLAlchemy, SQLModel, Alembic, PostgreSQL
+- Cloud: AWS RDS (database), AWS App Runner (server), AWS ECS, Docker
 
 The repository is structured as a modular monolith with directories for the frontend and backend. Conceptually, the frontend has abstracted layers for REST API routes, business services, custom hooks, components, types, and pages. Similarly, the backend has abstracted layers for database schemas, REST API routes, and business services.
 

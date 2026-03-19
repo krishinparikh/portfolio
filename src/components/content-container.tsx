@@ -13,6 +13,6 @@ export function Subheader({ children }: { children: React.ReactNode }) {
 export function FullImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} className={`w-full shadow-md ${className ?? ""}`} />
+    <img src={src} alt={alt} className={`w-full shadow-md mb-4 ${className ?? ""}`} />
   );
 }

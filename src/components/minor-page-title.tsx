@@ -5,7 +5,7 @@ interface MinorPageTitleProps {
 
 export function MinorPageTitle({ title, subtitle }: MinorPageTitleProps) {
   return (
-    <div className="max-w-[720px] mx-auto text-center pt-10 pb-10 px-4">
+    <div className="max-w-[720px] mx-auto text-center pt-10 pb-10 px-4 max-md:px-6">
       <h1 className="!text-[2.75rem] mb-4">{title}</h1>
       {subtitle && <p>{subtitle}</p>}
     </div>
