@@ -1,0 +1,80 @@
+export const frontmatter = {
+  title: "Lineage",
+  subtitle: "Helping older adults create a movie of their life — powered by AI.",
+  description: "Helping older adults create a movie of their life — powered by AI.",
+  image: "/images/LineageLogo.png",
+  slug: "lineage",
+  type: "project",
+  tools: "Next.js • TypeScript • FastAPI • OpenAI • ElevenLabs • FFmpeg • Supabase",
+  website: "http://lineagemovies.com",
+  order: 0,
+};
+
+## Overview
+
+Lineage helps older adults turn their life stories into narrated, cinematic videos. Users upload family photos, have guided conversations with an AI storytelling partner, and Lineage generates a polished movie complete with narration, Ken Burns effects, and subtitles. The goal is to make family story preservation as easy as having a conversation.
+
+I'm building Lineage with my co-founder Kaleb Kim. We've been awarded a $950 THINK DO THRIVE grant and $500 from a pitch competition in Austin, and are currently in beta testing ahead of an official release in Summer 2026.
+
+## Background
+
+Family stories die with each generation. Photo albums sit untouched, artifacts remain shelved away, written memoirs require significant time, and deep conversations are rarely recorded. I saw this firsthand with my own grandmother — she has incredible stories from her life in New Delhi and her journey to the United States, but there was no easy way to preserve them in a format that future generations would actually engage with.
+
+Existing solutions fall into three categories, each with critical shortcomings. Book platforms like StoryWorth require manual writing effort and lack visual and audio elements. Film consultancies produce high-quality results but charge thousands of dollars and take weeks. AI video editors like Google Vids and Magisto can assemble clips, but they lack any storytelling capability — they don't help you figure out *what* to say.
+
+Lineage sits at the intersection: it provides the storytelling guidance of a professional filmmaker with the accessibility and affordability of software.
+
+## Discovery
+
+We conducted 20 interviews with families to validate the problem and understand the target user. Four key insights emerged:
+
+1. Written preservation methods have high friction — most people start but never finish memoir projects.
+2. Families often have large collections of physical and digital artifacts (photos, videos, documents) that go unused.
+3. The likely buyer is a middle-aged woman purchasing the experience for a parent.
+4. Younger generations are far more engaged with video than with books, making video the right output format.
+
+These conversations shaped our conviction that the product should feel like a guided conversation rather than a writing exercise, and that the final output needed to be video — something families would actually watch and share.
+
+## Ideation
+
+Based on our discovery insights, we designed a four-step workflow for each chapter of a user's story:
+
+1. **Media** — Upload the photos and videos that bring the chapter to life. An AI storytelling partner uses voice mode to ask probing questions about each photo, drawing out the memories and details behind them.
+
+2. **Storytelling** — An AI writing partner generates a narrative script from the conversations and media descriptions, then collaboratively refines it with the user through a diff-based editing interface. Users can accept, reject, or modify each suggested change.
+
+3. **Narration** — The user records themselves reading the finalized script aloud, or uses AI-powered text-to-speech with ElevenLabs voice cloning for a natural alternative.
+
+4. **Video Creation** — Once media is uploaded, the script is finalized, and narration is recorded, the system generates the video with options for subtitles and background music.
+
+A user's story is organized into chapters (e.g., "New Delhi to New York," "Raising the Family"), each progressing through these four steps independently before being combined into a full movie.
+
+## Development
+
+The tech stack is split across a Next.js frontend and a FastAPI backend, connected by Supabase for auth and data storage and Cloudflare R2 for media.
+
+**Frontend (Next.js 16, React 19, TypeScript):** The app uses the App Router with Supabase auth, shadcn/ui components, and TanStack Query for server state. The storytelling interface uses the Vercel AI SDK for streaming chat and TipTap for rich text editing with diff tracking. Audio recording uses the browser's MediaRecorder API, and client-side video preview leverages FFmpeg.wasm.
+
+**Backend (FastAPI, Python):** The backend handles the heavy processing that can't run in serverless environments. The core pipeline works as follows: Whisper transcribes narration audio with word-level timestamps, an LLM semantically segments the script into 8-12 word chunks (~3-5 seconds each), another LLM matches each segment to the most relevant uploaded photo, and FFmpeg composes the final video with Ken Burns effects, crossfade transitions, and optional burned-in subtitles.
+
+**AI Agents (LangChain/LangGraph):** We built several specialized agents — a chapter planner that generates chapters from selected topics, a media storyteller that conducts voice-based conversations about uploaded photos, a script generator that produces and iterates on narrative scripts with diff tracking, and a writing partner that helps refine prose through multi-turn chat.
+
+**Video Generation Architecture:** Video generation is a CPU-intensive, multi-minute process that can't run within serverless timeout limits. We solved this with a background job worker that polls a `video_job` table in Supabase. When a user requests a video, the API inserts a pending job and returns immediately (202 Accepted). The worker picks it up, processes each segment, concatenates the clips, muxes the audio, and uploads the result to R2. The frontend polls for status updates.
+
+**Media Uploads:** To avoid Vercel's 4.5 MB body-size limit, we use presigned URLs for direct browser-to-R2 uploads. The backend generates a signed URL, the frontend uploads directly to Cloudflare, and the media record is created in Supabase afterward.
+
+## Future Directions
+
+We are currently beta testing with 5 users and plan to officially release in August 2026, followed by a social media campaign. Our near-term goal is to generate 100 movies by the end of 2026.
+
+On the product side, we're exploring background music that intelligently matches the tone of each story, multilingual subtitle support, and richer video effects. On the business side, we're targeting middle-aged parents as our ideal customer profile through organic social media, ads, and referrals.
+
+## Reflections
+
+Lineage is a deeply personal project — it started with wanting to preserve my grandmother's stories, and has grown into something that I believe can help many families. A few reflections so far:
+
+1. The hardest part of building Lineage has not been the technology but rather the product design. Getting the storytelling UX right — making it feel like a natural conversation rather than a tedious form — required many iterations and direct observation of users interacting with the product.
+
+2. Video generation is a deceptively complex problem. The pipeline from raw photos and audio to a polished cinematic video involves transcription, semantic segmentation, media matching, effects rendering, and audio synchronization — each with its own edge cases. Building this pipeline reinforced the importance of breaking hard problems into well-defined, independently testable stages.
+
+3. Working with a co-founder has been a multiplier. Kaleb brings deep expertise in data engineering and video production that complements my product and full-stack background. The division of ownership has allowed us to move significantly faster than I could alone.

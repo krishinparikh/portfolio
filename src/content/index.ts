@@ -8,6 +8,7 @@ import * as CubeFlow from "./projects/cube-flow.mdx";
 import * as EightPuzzle from "./projects/eight-puzzle.mdx";
 import * as Nexa from "./projects/nexa.mdx";
 import * as PeerEd from "./projects/peer-ed.mdx";
+import * as Lineage from "./projects/lineage.mdx";
 
 import * as GenAIConsulting from "./services/generative-ai-consulting.mdx";
 import * as CRMImplementation from "./services/crm-implementation.mdx";
@@ -36,6 +37,7 @@ const modules = [
   EightPuzzle,
   Nexa,
   PeerEd,
+  Lineage,
   GenAIConsulting,
   CRMImplementation,
   RubiksCubeLessons,
