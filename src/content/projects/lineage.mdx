@@ -1,0 +1,91 @@
+export const frontmatter = {
+  title: "Lineage",
+  subtitle: "Helping older adults create a movie of their life — powered by AI.",
+  description: "Helping older adults create a movie of their life — powered by AI.",
+  image: "/images/projects/lineage/logo.png",
+  slug: "lineage",
+  type: "project",
+  tools: "Next.js • TypeScript • FastAPI • OpenAI • ElevenLabs • FFmpeg • Supabase",
+  website: "http://lineagemovies.com",
+  order: 0,
+};
+
+<FullImage src="/images/projects/lineage/screenshot-1.png" alt="Lineage landing page" />
+
+## Overview
+
+Lineage helps older adults turn their life stories into narrated, cinematic videos. Users upload family photos, have guided conversations with an AI storytelling partner, and Lineage generates a polished movie complete with narration, effects, and captions. The goal is to make family story preservation as easy as having a conversation.
+
+I'm building Lineage with my co-founder [Kaleb Kim](https://www.linkedin.com/in/kaleb-k/). To date, we have raised $6,450 in non-dilutive funding:
+
+- 1st place, Morganthaler-Pavey Startup Competition ($4,000)
+- 1st place, CWRU Intersections Symposium ($1,000)
+- Veale Institute for Entrepreneurship grant ($950)
+- yconic.ai pitch competition ($500)
+
+We are opening up beta testing soon.
+
+## Background
+
+Family stories die with each generation. As a grandchild of immigrants, I grew up captivated by my family history — and painfully aware of how easily it can slip away. After the passing of my grandmother several months ago, our family reflected on how we could have better learned her stories and captured her memories before it was too late. In some ways, that sense of regret inspired Lineage.
+
+The memory preservation solutions I found lacked some critical element. Book platforms like StoryWorth require manual writing effort and miss the warmth of a voice or the power of a photograph. Film consultancies can produce something beautiful, but they cost thousands of dollars and take weeks — out of reach for most families. AI video editors like Google Vids and Magisto can assemble clips, but they don't help you figure out *what* to say. None of them capture what it actually feels like to sit with someone and hear their story.
+
+Lineage sits at the intersection: the storytelling guidance of a professional filmmaker with the accessibility and affordability of software.
+
+## Discovery
+
+We conducted 20 interviews with families — parents, grandparents, and kids alike — to validate the problem and understand the target user. We asked questions around the importance of memory preservation, family history, and preferences for videos vs. books as a medium. Four key insights emerged:
+
+1. Written preservation methods have high friction — most people start but never finish memoir projects.
+2. Families often have large collections of physical and digital artifacts (photos, videos, documents) that go unused.
+3. The likely buyer is a middle-aged woman purchasing the experience for a parent.
+4. Younger generations are far more engaged with video than with books, making video the right output format.
+
+These conversations shaped our conviction that the product should feel like a guided conversation rather than a writing exercise, and that the final output needed to be video — something families would actually watch and share.
+
+## Ideation
+
+A seamless, intuitive user experience was our number one priority. Our primary users are older adults, so designing with empathy and accessibility at the forefront was essential. We prototyped extensively in Figma, crafting an interface that feels largely conversational — minimizing the amount of clicking, using enlarged text for readability, and letting the product gently guide the user through each step rather than overwhelming them with options. The result is a four-step workflow for each chapter of a user's story:
+
+1. **Media** — Upload the photos and videos that bring the chapter to life. An AI storytelling partner uses voice mode to ask probing questions about each photo, drawing out the memories and details behind them.
+
+2. **Storytelling** — An AI writing partner generates a narrative script from the conversations and media descriptions, then collaboratively refines it with the user through a diff-based editing interface. Users can accept, reject, or modify each suggested change.
+
+3. **Narration** — The user records themselves reading the finalized script aloud, or uses AI-powered text-to-speech with ElevenLabs voice cloning for a natural alternative.
+
+4. **Video Creation** — Once media is uploaded, the script is finalized, and narration is recorded, the system generates the video with options for subtitles and background music.
+
+A user's story is organized into chapters (e.g., "New Delhi to New York," "Raising the Family"), each progressing through these four steps independently before being combined into a full movie.
+
+## Development
+
+The repo is split into two major packages. The first is a Next.js 16 web application (React 19, TypeScript, App Router) that handles the user-facing product — authentication via Supabase, UI with shadcn/ui, server state with TanStack Query, and all LLM orchestration through LangChain/LangGraph agents running in server actions. The second is a FastAPI backend (Python) that handles the heavy, CPU-intensive media processing that can't run within Vercel's serverless timeout limits — transcription, media labeling, and video rendering. Supabase connects the two as the shared database and auth layer, and Cloudflare R2 serves as object storage for all user media and generated videos.
+
+There are three major pipelines in this application: a storytelling partner for capturing memories, a script editing system for refining narratives, and a video generation pipeline for producing the final output.
+
+**Storytelling Partner.** The storytelling experience is built on ElevenLabs' Conversational AI, which provides a unified real-time voice agent with built-in speech-to-text and text-to-speech over WebRTC. A React hook connects to the ElevenLabs endpoint with an agent ID and optional system prompt overrides, initiating a low-latency voice session where the agent speaks, listens, and responds naturally. The agent is prompted to behave as a warm, empathetic storytelling partner — asking one question at a time, drawing out sensory details and emotions, and guiding the user toward vivid, filmable scenes. Conversation history is persisted to the chapter record in Supabase, and a separate LLM call evaluates conversation quality on criteria like story completeness, emotional depth, and character development to determine when there's enough material to generate a script.
+
+**Script Editing.** Script generation uses a LangGraph chain that collects chapter context — title, theme, full chat history, existing script (if updating), and media descriptions — and calls GPT-4o to produce a complete narrative script. When updating an existing script, the system computes sentence-level diffs using the `diff` library, then calls GPT-4o-mini on each change to generate a rationale explaining why the edit was made. The frontend renders these diffs in a TipTap rich text editor with inline strikethrough/highlight styling and accept/reject buttons per suggestion. Accepted diffs are applied via regex-based find-and-replace on the stored script; rejected diffs are simply discarded. All suggestions are persisted in a `diff_log` table with version tracking for auditability. We chose sentence-level (not word-level) diffing to balance granularity with readability, and the explicit accept/reject flow gives users full control over their narrative — the AI suggests, but the user decides.
+
+**Video Generation.** Video generation is a multi-stage pipeline that runs as a background job. When a user requests a video, the API inserts a pending record into a `video_job` table and returns immediately (202 Accepted). A background worker polls for pending jobs and executes a five-phase pipeline:
+
+1. **Transcription and segmentation** — OpenAI Whisper transcribes the narration audio with word-level timestamps, and the transcript is segmented into 8–12 word chunks (~3–5 seconds each) using intelligent boundary detection that prioritizes sentence breaks, then clause boundaries, then hard word limits.
+2. **Media matching** — A single GPT-4o-mini call matches each segment to the most relevant uploaded photo or video based on subject, scene, thematic fit, and narrative continuity, with constraints on maximum media reuse and minimum gap between repetitions.
+3. **Clip rendering** — FFmpeg renders per-segment clips — images get Ken Burns effects (cycling zoom-in, pan-right, zoom-out, pan-left) scaled to 1080p at 30 FPS, while videos are trimmed and letterboxed.
+4. **Concatenation and audio muxing** — Clips are concatenated with 0.5-second crossfade transitions, audio is muxed with EBU R128 loudness normalization, and the result is encoded with the `faststart` flag for web streaming.
+5. **Subtitles** — If requested, SRT subtitles are burned in with styled overlays.
+
+The completed video is uploaded to R2 and the frontend polls for status updates.
+
+## Future Directions
+
+Lineage is a deeply personal project — it started with wanting to preserve my grandmother's stories, and has grown into something that I believe can help many families.
+
+We are about to open our waitlist and start beta testing soon, with plans to officially release in August 2026 followed by a social media campaign. Our near-term goal is to generate 100 movies by the end of 2026.
+
+The hardest part of building Lineage has been the product design, not the technology. Getting the storytelling UX right — making it feel like a natural conversation rather than a tedious form — is an ongoing challenge. We're continuing to iterate through direct observation of users interacting with the product.
+
+Video generation is a deceptively complex problem — the pipeline from raw photos and audio to a polished cinematic video involves transcription, semantic segmentation, media matching, effects rendering, and audio synchronization, each with its own edge cases. We plan to extend it further with background music that intelligently matches the tone of each story, multilingual subtitle support, and richer visual effects.
+
+As we move into beta testing, we'll be iterating on the product based on real user feedback and preparing for a full launch. We're excited for what's ahead.

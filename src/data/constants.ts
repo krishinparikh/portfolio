@@ -18,14 +18,14 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const HOME_PHRASES = [
-  "seek discomfort",
+  "seeking discomfort",
   "process over outcomes",
-  "invest in relationships",
-  "work hard, play hard",
-  "follow curiosity",
-  "seek different viewpoints",
-  "walk the talk",
-  "focus on the long-term",
+  "investing in relationships",
+  "working hard, playing hard",
+  "following curiosity",
+  "seeking different viewpoints",
+  "walking the talk",
+  "focusing on the long-term",
 ];
 
 export const CAROUSEL_TIMING = {

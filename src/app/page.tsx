@@ -6,9 +6,9 @@ import { SOCIAL_LINKS, CONTACT } from "@/data/constants";
 import { FadeIn } from "@/components/fade-in";
 
 const socialIcons = [
-  { href: SOCIAL_LINKS.linkedin, icon: "/images/LinkedinIcon.png", alt: "LinkedIn" },
-  { href: SOCIAL_LINKS.github, icon: "/images/GithubIcon.png", alt: "GitHub" },
-  { href: SOCIAL_LINKS.youtube, icon: "/images/YoutubeIcon.png", alt: "YouTube" },
+  { href: SOCIAL_LINKS.linkedin, icon: "/images/icons/linkedin.png", alt: "LinkedIn" },
+  { href: SOCIAL_LINKS.github, icon: "/images/icons/github.png", alt: "GitHub" },
+  { href: SOCIAL_LINKS.youtube, icon: "/images/icons/youtube.png", alt: "YouTube" },
 ];
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/images/Headshot.jpg"
+              src="/images/profile/headshot.jpg"
               alt="Krishin Parikh"
               width={250}
               height={250}
@@ -82,6 +82,9 @@ export default function Home() {
               (Summer 2023)
             </li>
           </ul>
+          <p>
+            I'm currently building <Link href="/projects/lineage">Lineage</Link>, a platform that helps older adults create a movie of their life story — inspired by my own desire to connect with my family history. Since starting in January 2026, my co-founder and I have raised $6,450 and are actively beta testing.
+          </p>
           <p>
             I&apos;m the President of Case Western&apos;s{" "}
             <a

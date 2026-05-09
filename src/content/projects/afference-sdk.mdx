@@ -2,12 +2,12 @@ export const frontmatter = {
   title: "Afference SDK",
   subtitle: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
   description: "A C# library that allows software developers to use Afference products to integrate complex haptics into their digital experiences.",
-  image: "/images/AfferenceLogo.jpg",
+  image: "/images/projects/afference/logo.jpg",
   slug: "afference-sdk",
   type: "project",
   tools: "C# • Unity • UML • Python • NumPy • Matplotlib",
   website: "http://afference.io",
-  order: 3,
+  order: 4,
 };
 
 ## Background
@@ -22,11 +22,11 @@ I was tasked with developing the layer of the software stack responsible for tra
 
 After gaining clarity through the Python model, I shifted my focus to Unity and C#, the platforms where the team had previously built several virtual reality and computer demos leveraging Afference haptics. In Unity, I designed and developed an internal tool that enabled users to transform any intensity curve into customized stimulation parameters for the Phantom, the Afference product shown below.
 
-<img src="/images/Phantom.png" alt="Phantom device" className="w-[70%] mb-4" />
+<img src="/images/projects/afference/phantom.png" alt="Phantom device" className="w-[70%] mb-4" />
 
 The original Unity application was a significant advancement, but it was limited to the specific hardware configuration and stimulation parameters of the Phantom device. It did not accommodate the variety of prototypes and plans for both past and future Afference wearables, such as the Afference Ring shown below.
 
-<img src="/images/AfferenceRing.jpg" alt="Afference Ring" className="w-[15%] my-5" />
+<img src="/images/projects/afference/ring.jpg" alt="Afference Ring" className="w-[15%] my-5" />
 
 To address these limitations, the natural next step was to build an object-oriented system capable of abstracting the wide range of possible hardware configurations and stimulation mechanisms. This level of abstraction is essential, as the system must handle scenarios where certain sensations cannot be produced consistently across multiple products due to varying hardware constraints.
 
