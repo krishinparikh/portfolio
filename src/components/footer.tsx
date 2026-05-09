@@ -19,9 +19,9 @@ export function Footer() {
             {CONTACT.email}
           </a>
           {[
-            { href: SOCIAL_LINKS.linkedin, icon: "/images/LinkedinIcon.png", alt: "LinkedIn" },
-            { href: SOCIAL_LINKS.github, icon: "/images/GithubIcon.png", alt: "GitHub" },
-            { href: SOCIAL_LINKS.youtube, icon: "/images/YoutubeIcon.png", alt: "YouTube" },
+            { href: SOCIAL_LINKS.linkedin, icon: "/images/icons/linkedin.png", alt: "LinkedIn" },
+            { href: SOCIAL_LINKS.github, icon: "/images/icons/github.png", alt: "GitHub" },
+            { href: SOCIAL_LINKS.youtube, icon: "/images/icons/youtube.png", alt: "YouTube" },
           ].map(({ href, icon, alt }) => (
             <a
               key={alt}

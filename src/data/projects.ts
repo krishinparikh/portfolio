@@ -15,7 +15,7 @@ export const projects: Project[] = [
     slug: "",
     title: "Personal Website",
     description: "This website!",
-    image: "/images/PersonalWebsite.jpg",
+    image: "/images/projects/personal-website/thumbnail.jpg",
     link: "/",
     tools: "Next.js • TypeScript • Tailwind • Vercel",
   },

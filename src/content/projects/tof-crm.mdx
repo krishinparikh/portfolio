@@ -2,7 +2,7 @@ export const frontmatter = {
   title: "The O.H.I.O. Fund CRM",
   subtitle: "An advanced CRM for an investment firm to streamline management of deal flow, fundraising, and portfolio tracking.",
   description: "An advanced CRM for an investment firm to streamline management of deal flow, fundraising, and portfolio tracking.",
-  image: "/images/TOFLogo.png",
+  image: "/images/projects/tof-crm/logo.png",
   slug: "tof-crm",
   type: "project",
   tools: "React • TypeScript • FastAPI • LangChain",
@@ -31,15 +31,15 @@ Simultaneously, we iteratively constructed a relational database schema. This wa
 
 Only after gaining clarity on the UX flow and data model did I create a low-fidelity mockup on Figma. The main purpose of this exercise was to visualize the user flow and reconsider product requirements that we previously overlooked.
 
-<FullImage src="/images/tof-lowfidelity.png" alt="Low Fidelity Mockup" />
+<FullImage src="/images/projects/tof-crm/low-fidelity.png" alt="Low Fidelity Mockup" />
 
 Then, I moved onto the high-fidelity mockup. I created my own design system, taking inspiration from shadcn/ui components.
 
 <div>
-  <img src="/images/tof-highfidelity-1.png" alt="High Fidelity Mockup 1" className="w-[48%] mr-[4%] shadow-md inline" />
-  <img src="/images/tof-highfidelity-2.png" alt="High Fidelity Mockup 2" className="w-[48%] shadow-md inline" />
+  <img src="/images/projects/tof-crm/high-fidelity-1.png" alt="High Fidelity Mockup 1" className="w-[48%] mr-[4%] shadow-md inline" />
+  <img src="/images/projects/tof-crm/high-fidelity-2.png" alt="High Fidelity Mockup 2" className="w-[48%] shadow-md inline" />
 </div>
-<FullImage src="/images/tof-highfidelity-3.png" alt="High Fidelity Mockup 3" className="mt-[4%]" />
+<FullImage src="/images/projects/tof-crm/high-fidelity-3.png" alt="High Fidelity Mockup 3" className="mt-[4%]" />
 
 ## Development
 
@@ -57,11 +57,11 @@ I started by using some Figma extensions to convert my Figma design system (vari
 
 I used a reusable prompt in addition to these MCP servers to iteratively convert each Figma component into scalable React code. After building the skeletons of the components, I used another reusable prompt to add the logic that connected the frontend and backend together via hooks and functions by giving context to the right schema types.
 
-<FullImage src="/images/tof-product-2.png" alt="CRM Page 2" />
+<FullImage src="/images/projects/tof-crm/product-2.png" alt="CRM Page 2" />
 
 Once the foundation was laid, we built an AI chatbot using LangChain (agentic framework), allowing us to query company data in natural language. We implemented this using text-to-SQL techniques, giving the agent access to the database schema.
 
-<FullImage src="/images/tof-product-1.png" alt="CRM Page 1" />
+<FullImage src="/images/projects/tof-crm/product-1.png" alt="CRM Page 1" />
 
 ## Reflections
 

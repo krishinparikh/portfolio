@@ -6,9 +6,9 @@ import { SOCIAL_LINKS, CONTACT } from "@/data/constants";
 import { FadeIn } from "@/components/fade-in";
 
 const socialIcons = [
-  { href: SOCIAL_LINKS.linkedin, icon: "/images/LinkedinIcon.png", alt: "LinkedIn" },
-  { href: SOCIAL_LINKS.github, icon: "/images/GithubIcon.png", alt: "GitHub" },
-  { href: SOCIAL_LINKS.youtube, icon: "/images/YoutubeIcon.png", alt: "YouTube" },
+  { href: SOCIAL_LINKS.linkedin, icon: "/images/icons/linkedin.png", alt: "LinkedIn" },
+  { href: SOCIAL_LINKS.github, icon: "/images/icons/github.png", alt: "GitHub" },
+  { href: SOCIAL_LINKS.youtube, icon: "/images/icons/youtube.png", alt: "YouTube" },
 ];
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/images/Headshot.jpg"
+              src="/images/profile/headshot.jpg"
               alt="Krishin Parikh"
               width={250}
               height={250}

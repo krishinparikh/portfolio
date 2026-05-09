@@ -1,0 +1,41 @@
+export const frontmatter = {
+  title: "VC Council",
+  subtitle: "An AI-powered due diligence platform that simulates an investment committee debate.",
+  description: "An AI-powered due diligence platform that simulates an investment committee debate.",
+  image: "/images/projects/vc-council/logo.png",
+  slug: "vc-council",
+  type: "project",
+  tools: "React • TypeScript • Flask • LangChain • LangGraph • PostgreSQL • Redis • Docker",
+  github: "https://github.com/krishinparikh/vc-council",
+  order: 3,
+};
+
+## Background
+
+As a member of the CWRU Alumni Venture Fund, I've seen firsthand how inconsistent early-stage deal analysis can be. Reviewing a pitch deck thoroughly takes days, the depth of analysis varies depending on who's assigned, and confirmation bias is difficult to overcome — especially when evaluating fellow alumni founders. There's no standardized framework, no audit trail of past reasoning, and limited time to surface every risk and opportunity across dozens of deals per semester.
+
+I wanted to build a tool that could augment our analysts' capabilities rather than replace them. The idea was straightforward: what if an AI system could simulate the adversarial debate that happens in a real investment committee, giving analysts a structured starting point before they form their own opinions? VC Council was the result — a platform where you upload a pitch deck and receive a full investment committee analysis within minutes.
+
+<FullImage src="/images/projects/vc-council/screenshot-1.png" alt="VC Council screenshot" />
+
+## Development
+
+The system is built as a React frontend with a Flask backend, orchestrated by LangChain and LangGraph, and backed by PostgreSQL for persistence and Redis for real-time streaming.
+
+**The Pipeline.** When a pitch deck is uploaded, the backend extracts text using `pdfplumber` and an LLM structures it into sections (Problem, Solution, Market, Team, Product, Financials, Ask). From there, 8 specialist agents — one for each combination of diligence category (Market, Team, Product, Financials) and perspective (bull, bear) — run in parallel using a `ThreadPoolExecutor`. Each specialist writes a detailed research memo arguing its assigned position with cited sources.
+
+**Synthesis and Debate.** After the specialist phase, each side designates a representative that reads all four of its team's memos and synthesizes them into a single opening argument, weaving cross-category themes together. In Round 2, each representative receives the opponent's opening argument and writes a direct rebuttal. This adversarial structure forces the system to steelman both sides of the investment decision rather than converging on a single narrative.
+
+**The Verdict.** A judge agent reads the full debate transcript plus all 8 specialist memos and renders a final invest/pass decision with detailed reasoning. The judge uses a lower temperature (0.3 vs 0.7 for specialists) to prioritize consistency over creativity in the final call.
+
+**Real-Time Streaming.** Arguments stream token-by-token to the frontend via Redis pub/sub and server-sent events, so users can watch the analysis unfold live. The frontend displays bull and bear cases side-by-side with a round stepper, a research artifacts sidebar for browsing specialist memos, and a verdict view with the judge's explanation.
+
+**Architecture.** LangGraph's `StateGraph` models the entire pipeline as a directed graph of nodes (parse, specialists, synthesis, debate, judge), making the flow composable and easy to extend. The full pipeline makes roughly 15 LLM calls using Claude Sonnet — 1 for parsing, 1 for name extraction, 8 for specialists, 2 for synthesis, 2 for rebuttals, and 1 for the judge — all completing in a few minutes. Docker Compose ties together the React frontend, Flask API, PostgreSQL database, and Redis instance for local development and deployment.
+
+## Reflections
+
+1. The adversarial debate structure turned out to be more valuable than I expected. Early prototypes used a single-pass analysis, but the quality of insights improved significantly when the system was forced to argue both sides. The rebuttals in particular surfaced nuanced counterpoints that a one-shot analysis would miss entirely.
+
+2. Parallelizing the 8 specialist agents was essential for keeping analysis time reasonable. Running them sequentially would have taken 8x longer, but because each specialist is independent, they can execute concurrently with no coordination overhead. This reinforced a broader lesson about designing AI pipelines: structure your agents so that independent work can happen in parallel.
+
+3. Building with LangGraph gave me a much deeper appreciation for graph-based orchestration. Compared to chaining raw API calls, modeling the pipeline as a state graph made it straightforward to add new stages, adjust the number of debate rounds, or swap in different prompts — without rewriting control flow logic.
