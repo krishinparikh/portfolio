@@ -5,14 +5,18 @@ export function Bio() {
   return (
     <div className="max-w-[720px] w-full text-left mt-8 leading-relaxed [&_a]:text-link [&_a]:no-underline [&_a:hover]:text-link-hover [&_a:hover]:transition-colors [&_a:hover]:duration-200">
       <p>
-        I&apos;m an entrepreneurial technology leader obsessed with building great products and teams.
+        I&apos;m an incoming Member of Technical Staff at{" "}
+        <a href="https://www.redcellpartners.com/" target="_blank" rel="noopener noreferrer">
+          Red Cell Partners
+        </a>
+        , a venture studio building and investing in companies across healthcare, cyber, and national security.
       </p>
       <p>
-        I study Computer Science, Finance, and Economics at{" "}
+        I studied Computer Science, Finance, and Economics at{" "}
         <a href="http://case.edu" target="_blank" rel="noopener noreferrer">
           Case Western Reserve University
         </a>{" "}
-        (Class of 2026).
+        (Class of 2026), where I honed my interests in product, engineering, and business.
       </p>
       <p>
         I have a track record of delivering substantial value through various internships across finance, VR/AR, and healthcare:
@@ -44,7 +48,7 @@ export function Bio() {
         I'm currently building <Link href="/projects/lineage">Lineage</Link>, a platform that helps older adults create a movie of their life story — inspired by my own desire to connect with my family history. Since starting in January 2026, my co-founder and I have raised $6,450 and are actively beta testing.
       </p>
       <p>
-        I&apos;m the President of Case Western&apos;s{" "}
+        I was the President of Case Western&apos;s{" "}
         <a
           href="https://case.edu/entrepreneurship/funding/cwru-alumni-venture-fund"
           target="_blank"
@@ -53,7 +57,7 @@ export function Bio() {
           Alumni Venture Fund
         </a>{" "}
         &mdash; a venture fund investing in Case alumni/faculty (~$500k invested across 17
-        companies) &mdash; where I've gotten a bird's-eye view on many industries and the opportunity to meet incredible founders.
+        companies) &mdash; where I got a bird's-eye view on many industries and the opportunity to meet incredible founders.
       </p>
       <p>
         I like <Link href="/projects">building stuff</Link>,{" "}
