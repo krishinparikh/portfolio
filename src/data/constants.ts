@@ -42,15 +42,3 @@ export const AURORA = {
   speed: 0.5,
   lightMode: true,
 } as const;
-
-export const DOT_GRID = {
-  dotSize: 2,
-  gap: 22,
-  baseColor: "#dcdcdc",
-  activeColor: "#6d28d9",
-  proximity: 120,
-  shockRadius: 250,
-  shockStrength: 5,
-  resistance: 450,
-  returnDuration: 1.5,
-} as const;

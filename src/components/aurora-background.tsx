@@ -23,10 +23,14 @@ interface AuroraBackgroundProps extends AuroraProps {
  *     ...page content...
  *   </AuroraBackground>
  *
- * The canvas is pinned to the top of the viewport at z-0 and children are
- * stacked above it, so nothing else needs to change. Defaults come from AURORA
- * in constants.ts; pass any prop to override per page. Sits below the navbar
- * (z-1000).
+ * The canvas sits at the top of the document at z-0 and scrolls away with the
+ * page; children are stacked above it, so nothing else needs to change.
+ * Defaults come from AURORA in constants.ts; pass any prop to override per
+ * page. Sits below the navbar (z-1000).
+ *
+ * The canvas is absolute with no positioned ancestor, so it anchors to the
+ * document origin rather than to body's top padding. That keeps it starting
+ * behind the navbar instead of below it.
  */
 export function AuroraBackground({
   children,
@@ -49,7 +53,7 @@ export function AuroraBackground({
       {enabled && (
         <div
           aria-hidden
-          className="fixed inset-x-0 top-0 z-0 pointer-events-none animate-in fade-in duration-1000"
+          className="absolute inset-x-0 top-0 z-0 pointer-events-none animate-in fade-in duration-1000"
           style={{
             height,
             // Fade the lower edge out so the band has no hard cutoff.
