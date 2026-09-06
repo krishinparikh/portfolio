@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/data/projects";
 import { FadeIn } from "@/components/fade-in";
+import { DotGridBackground } from "@/components/dot-grid-background";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div>
+    <DotGridBackground>
       <PageTitle
         title="Portfolio"
         subtitle="A collection of my internship work, startup ideas, and side projects. Click inside for a detailed case study of each project, from ideation to launch."
@@ -24,6 +25,6 @@ export default function Projects() {
         ))}
       </div>
       <Footer />
-    </div>
+    </DotGridBackground>
   );
 }
