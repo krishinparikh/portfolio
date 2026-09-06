@@ -40,5 +40,5 @@ export const AURORA = {
   blend: 0.7,
   amplitude: 1.0,
   speed: 0.5,
-  lightMode: true,
+  lightMode: false,
 } as const;
