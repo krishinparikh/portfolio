@@ -33,7 +33,7 @@ export function Hero() {
         alt="Krishin Parikh"
         width={250}
         height={250}
-        className="w-[250px] h-auto rounded-[4%]"
+        className="w-[250px] h-auto rounded-[4%] shadow-[0_0_10px_rgba(0,0,0,0.07)]"
       />
     </div>
   );
