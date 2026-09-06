@@ -12,6 +12,8 @@ export interface AuroraProps {
   blend?: number;
   /** Animation speed multiplier. */
   speed?: number;
+  /** Drive the clock externally instead of using requestAnimationFrame's timestamp. */
+  time?: number;
   /** Renders as tinted white rather than glowing on black. */
   lightMode?: boolean;
 }
@@ -198,8 +200,8 @@ export function Aurora(props: AuroraProps) {
       animateId = requestAnimationFrame(update);
       // Skip GPU work while the tab is backgrounded.
       if (document.hidden) return;
-      const { speed = 1.0 } = propsRef.current;
-      program.uniforms.uTime.value = t * 0.01 * speed * 0.1;
+      const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+      program.uniforms.uTime.value = time * speed * 0.1;
       program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? amplitude;
       program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
       program.uniforms.uLightMode.value = (propsRef.current.lightMode ?? lightMode) ? 1 : 0;
@@ -219,8 +221,10 @@ export function Aurora(props: AuroraProps) {
       }
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
+    // Every uniform is re-synced from propsRef each frame, so the context is
+    // built once and prop changes never tear down WebGL.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [amplitude, blend, lightMode]);
+  }, []);
 
   return <div ref={ctnDom} className="w-full h-full" />;
 }
