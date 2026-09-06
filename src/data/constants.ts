@@ -32,3 +32,11 @@ export const CAROUSEL_TIMING = {
   interval: 3000,
   fade: 500,
 } as const;
+
+export const AURORA = {
+  colorStops: ["#6d28d9", "#ec4899", "#06b6d4"] as [string, string, string],
+  blend: 0.5,
+  amplitude: 1.0,
+  speed: 0.5,
+  lightMode: true,
+} as const;
