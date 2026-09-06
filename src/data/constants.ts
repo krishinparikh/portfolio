@@ -34,8 +34,9 @@ export const CAROUSEL_TIMING = {
 } as const;
 
 export const AURORA = {
-  // Lighter tints of #3d7392 / #58233c, mixed 35% toward white.
-  colorStops: ["#81a4b8", "#927080"] as [string, string],
+  // Softened navy (#22335c) and maroon (#6b2029). Light mode normalizes away
+  // brightness, so these are pre-mixed toward white to match saturation at 0.33.
+  colorStops: ["#64708d", "#a3757a"] as [string, string],
   /** Height of the canvas band at the top of the viewport. */
   height: "38vh",
   /** Overall strength of the layer. The shader has no brightness knob. */
