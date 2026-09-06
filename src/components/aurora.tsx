@@ -4,8 +4,12 @@ import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
 
 export interface AuroraProps {
-  /** Three hex colors defining the gradient, left to right. */
-  colorStops?: [string, string, string];
+  /**
+   * Hex colors defining the gradient, left to right. Pass two for a plain
+   * two-color ramp and the midpoint is derived; pass three to place the
+   * middle color yourself.
+   */
+  colorStops?: [string, string] | [string, string, string];
   /** Height intensity of the aurora bands. */
   amplitude?: number;
   /** How softly the effect blends into the background. */
@@ -134,6 +138,17 @@ void main() {
 }
 `;
 
+/** The shader indexes uColorStops[3], so a two-color ramp gets a derived midpoint. */
+function toStopTriple(stops: readonly string[]) {
+  const rgb = stops.map(hex => {
+    const c = new Color(hex);
+    return [c.r, c.g, c.b];
+  });
+  if (rgb.length >= 3) return rgb.slice(0, 3);
+  const [from, to] = rgb;
+  return [from, from.map((v, i) => (v + to[i]) / 2), to];
+}
+
 /**
  * Raw WebGL aurora renderer, vendored from reactbits.dev and ported to TS.
  * Fills its parent element, so give that parent a size. For page backgrounds
@@ -166,18 +181,13 @@ export function Aurora(props: AuroraProps) {
       delete geometry.attributes.uv;
     }
 
-    const toRgb = (hex: string) => {
-      const c = new Color(hex);
-      return [c.r, c.g, c.b];
-    };
-
     const program = new Program(gl, {
       vertex: VERT,
       fragment: FRAG,
       uniforms: {
         uTime: { value: 0 },
         uAmplitude: { value: amplitude },
-        uColorStops: { value: colorStops.map(toRgb) },
+        uColorStops: { value: toStopTriple(colorStops) },
         uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
         uBlend: { value: blend },
         uLightMode: { value: lightMode ? 1 : 0 },
@@ -206,7 +216,7 @@ export function Aurora(props: AuroraProps) {
       program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
       program.uniforms.uLightMode.value = (propsRef.current.lightMode ?? lightMode) ? 1 : 0;
       const stops = propsRef.current.colorStops ?? colorStops;
-      program.uniforms.uColorStops.value = stops.map(toRgb);
+      program.uniforms.uColorStops.value = toStopTriple(stops);
       renderer.render({ scene: mesh });
     };
     animateId = requestAnimationFrame(update);

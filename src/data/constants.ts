@@ -34,7 +34,7 @@ export const CAROUSEL_TIMING = {
 } as const;
 
 export const AURORA = {
-  colorStops: ["#3d7392", "#58233c", "#3d7392"] as [string, string, string],
+  colorStops: ["#3d7392", "#58233c"] as [string, string],
   /** Height of the canvas band at the top of the viewport. */
   height: "38vh",
   blend: 0.7,
