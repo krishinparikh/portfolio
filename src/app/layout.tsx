@@ -4,6 +4,7 @@ import { Funnel_Sans, Inter_Tight, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { AuroraBackground } from "@/components/aurora-background";
 
 const funnelSans = Funnel_Sans({
   variable: "--font-funnel-sans",
@@ -42,7 +43,7 @@ export default function RootLayout({
       >
         <Navbar />
         <ScrollToTop />
-        {children}
+        <AuroraBackground>{children}</AuroraBackground>
       </body>
     </html>
   );
