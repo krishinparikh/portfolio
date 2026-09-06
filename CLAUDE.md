@@ -29,7 +29,6 @@ Content (projects and services) is authored as MDX files in `src/content/project
 - `/services` — Service listing
 - `/services/[slug]` — Individual service (rendered from MDX)
 - `/story` — Story page
-- `/blog` — Blog page
 
 ### Key Conventions
 
