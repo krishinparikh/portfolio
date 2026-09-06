@@ -34,7 +34,8 @@ export const CAROUSEL_TIMING = {
 } as const;
 
 export const AURORA = {
-  colorStops: ["#3d7392", "#58233c"] as [string, string],
+  // Lighter tints of #3d7392 / #58233c, mixed 35% toward white.
+  colorStops: ["#81a4b8", "#927080"] as [string, string],
   /** Height of the canvas band at the top of the viewport. */
   height: "38vh",
   /** Overall strength of the layer. The shader has no brightness knob. */
