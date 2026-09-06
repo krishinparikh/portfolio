@@ -5,7 +5,7 @@ import { Aurora, type AuroraProps } from "./aurora";
 import { AURORA } from "@/data/constants";
 import { cn } from "@/lib/utils";
 
-const { height: DEFAULT_HEIGHT, ...AURORA_DEFAULTS } = AURORA;
+const { height: DEFAULT_HEIGHT, opacity: DEFAULT_OPACITY, ...AURORA_DEFAULTS } = AURORA;
 
 interface AuroraBackgroundProps extends AuroraProps {
   /** Page content. Lifted above the canvas automatically. */
@@ -14,6 +14,8 @@ interface AuroraBackgroundProps extends AuroraProps {
   className?: string;
   /** Height of the canvas band, any CSS length. Defaults to AURORA.height. */
   height?: string;
+  /** Overall strength, 0 to 1. Defaults to AURORA.opacity. */
+  opacity?: number;
 }
 
 /**
@@ -36,6 +38,7 @@ export function AuroraBackground({
   children,
   className,
   height = DEFAULT_HEIGHT,
+  opacity = DEFAULT_OPACITY,
   ...overrides
 }: AuroraBackgroundProps) {
   const [enabled, setEnabled] = useState(false);
@@ -56,6 +59,7 @@ export function AuroraBackground({
           className="absolute inset-x-0 top-0 z-0 pointer-events-none animate-in fade-in duration-1000"
           style={{
             height,
+            opacity,
             // Fade the lower edge out so the band has no hard cutoff.
             maskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",

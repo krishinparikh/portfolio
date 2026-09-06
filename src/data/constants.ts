@@ -37,6 +37,8 @@ export const AURORA = {
   colorStops: ["#3d7392", "#58233c"] as [string, string],
   /** Height of the canvas band at the top of the viewport. */
   height: "38vh",
+  /** Overall strength of the layer. The shader has no brightness knob. */
+  opacity: 0.35,
   blend: 0.7,
   amplitude: 1.0,
   speed: 0.5,
