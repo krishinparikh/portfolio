@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/data/projects";
 import { FadeIn } from "@/components/fade-in";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div>
+    <AuroraBackground>
       <PageTitle
         title="Portfolio"
         subtitle="A collection of my internship work, startup ideas, and side projects. Click inside for a detailed case study of each project, from ideation to launch."
@@ -24,6 +25,6 @@ export default function Projects() {
         ))}
       </div>
       <Footer />
-    </div>
+    </AuroraBackground>
   );
 }
