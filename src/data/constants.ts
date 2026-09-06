@@ -38,9 +38,9 @@ export const AURORA = {
   /** Height of the canvas band at the top of the viewport. */
   height: "38vh",
   /** Overall strength of the layer. The shader has no brightness knob. */
-  opacity: 0.35,
+  opacity: 1,
   blend: 0.7,
   amplitude: 1.0,
   speed: 0.5,
-  lightMode: false,
+  lightMode: true,
 } as const;
