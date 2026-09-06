@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/data/services";
 import { FadeIn } from "@/components/fade-in";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <div>
+    <AuroraBackground>
       <PageTitle
         title="Services"
         subtitle="Click inside to explore the various freelance services I offer. Each engagement will be tailored to your specific needs. Reach out to learn about next steps if you're interested!"
@@ -24,6 +25,6 @@ export default function Services() {
         ))}
       </div>
       <Footer />
-    </div>
+    </AuroraBackground>
   );
 }
